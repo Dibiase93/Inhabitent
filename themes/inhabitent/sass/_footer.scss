@@ -1,0 +1,31 @@
+#colophon {
+  display: grid;
+  background-image: url('../../assets/images/dark-wood.png');
+  width: 100%;
+  padding-top: 20px;
+  align-items: start;
+  justify-items: center;
+  grid-template:
+    [row1-start] 'contact hours logo logo' 3fr [row1-end]
+    [row2-start] 'copyright copyright copyright copyright' 1fr [row2-end];
+}
+
+.contact-info-container {
+  grid-area: contact;
+}
+// stretches 25%
+
+.business-hours-container {
+  grid-area: hours;
+}
+// stretches 25%
+
+.inhabitent-footer-logo {
+  grid-area: logo;
+}
+// stretches 50%
+
+.copyright-section {
+  grid-area: copyright;
+}
+// stretches 100%
