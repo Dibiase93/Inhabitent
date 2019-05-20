@@ -2,6 +2,7 @@
 
 $website__width: 1120px;
 $base__space-unit: 1.5rem;
+$footer-margin-top-bottom: 48px;
 
 // Colors
 
@@ -22,8 +23,10 @@ $color__link-hover: midnightblue;
 
 // Typography
 
-$font__main: sans-serif;
+$font__headers: 'Novecento Sans Web' serif;
+$font__secondary: 'Merriweather Web' sans-serif;
 $font__code: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
 $font__pre: 'Courier 10 Pitch', Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
+$footer__font-color: white;

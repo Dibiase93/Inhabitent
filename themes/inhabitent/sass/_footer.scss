@@ -1,31 +1,83 @@
 #colophon {
-  display: grid;
   background-image: url('../../assets/images/dark-wood.png');
   width: 100%;
-  padding-top: 20px;
-  align-items: start;
-  justify-items: center;
-  grid-template:
-    [row1-start] 'contact hours logo logo' 3fr [row1-end]
-    [row2-start] 'copyright copyright copyright copyright' 1fr [row2-end];
-}
 
-.contact-info-container {
-  grid-area: contact;
-}
-// stretches 25%
+  a {
+    text-decoration: none;
+    color: $footer__font-color;
+  }
 
-.business-hours-container {
-  grid-area: hours;
-}
-// stretches 25%
+  .footer-container {
+    display: grid;
+    @include main-container-size;
+    padding-top: 20px;
+    align-items: start;
+    justify-items: center;
+    grid-template:
+      [row1-start] 'contact hours logo logo' 4fr [row1-end]
+      [row2-start] 'copyright copyright copyright copyright' 1fr [row2-end];
 
-.inhabitent-footer-logo {
-  grid-area: logo;
-}
-// stretches 50%
+    .contact-info-container {
+      grid-area: contact;
+      margin: $footer-margin-top-bottom 0 $footer-margin-top-bottom 0;
 
-.copyright-section {
-  grid-area: copyright;
+      h3 {
+        @include footer-h3;
+      }
+
+      p {
+        font-family: $font__secondary;
+        color: $footer__font-color;
+
+        .fas {
+          margin-right: 5px;
+        }
+      }
+
+      .fab {
+        color: $footer__font-color;
+        margin-right: 5px;
+      }
+    }
+
+    .business-hours-container {
+      grid-area: hours;
+      margin: $footer-margin-top-bottom 0 $footer-margin-top-bottom 0;
+
+      h3 {
+        @include footer-h3;
+      }
+
+      p {
+        font-family: $font__secondary;
+        color: $footer__font-color;
+
+        .footer-bold {
+          font-weight: 700;
+        }
+      }
+    }
+
+    .inhabitent-footer-logo {
+      font-family: $font__secondary;
+      grid-area: logo;
+      margin-top: $footer-margin-top-bottom;
+      justify-self: end;
+
+      img {
+        margin-top: 1rem;
+        width: 280px;
+        height: 50px;
+      }
+    }
+
+    .copyright-section {
+      grid-area: copyright;
+      font-size: 1rem;
+
+      .copyright_caps {
+        text-transform: uppercase;
+      }
+    }
+  }
 }
-// stretches 100%

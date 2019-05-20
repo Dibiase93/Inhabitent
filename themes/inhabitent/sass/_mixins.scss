@@ -1,12 +1,26 @@
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
-	font-size: ($sizeValue * 16) * 1px;
-	font-size: $sizeValue * 1rem;
+  font-size: ($sizeValue * 16) * 1px;
+  font-size: $sizeValue * 1rem;
 }
 
 // Center block
 @mixin center-block {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//website container with with auto margin left and right
+@mixin main-container-size {
+  width: $website__width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin footer-h3 {
+  font-family: $font__headers;
+  color: #d99054;
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }
