@@ -43,6 +43,126 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Page Templates
 	## Front page
 --------------------------------------------------------------*/
+#colophon {
+  background-image: url("../../assets/images/dark-wood.png");
+  width: 100%; }
+  #colophon a {
+    text-decoration: none;
+    color: white; }
+  #colophon .footer-container {
+    display: grid;
+    width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    justify-items: center;
+    grid-template: [row1-start] "contact hours logo logo" 4fr [row1-end] [row2-start] "copyright copyright copyright copyright" 1fr [row2-end]; }
+    #colophon .footer-container .contact-info-container {
+      grid-area: contact;
+      margin: 48px 0 48px 0; }
+      #colophon .footer-container .contact-info-container h3 {
+        font-family: "Novecento Sans Web" serif;
+        color: #d99054;
+        font-size: 1.2rem;
+        text-transform: uppercase; }
+      #colophon .footer-container .contact-info-container p {
+        font-family: "Merriweather Web" sans-serif;
+        color: white; }
+        #colophon .footer-container .contact-info-container p .fas {
+          margin-right: 5px; }
+      #colophon .footer-container .contact-info-container .fab {
+        color: white;
+        margin-right: 5px; }
+    #colophon .footer-container .business-hours-container {
+      grid-area: hours;
+      margin: 48px 0 48px 0; }
+      #colophon .footer-container .business-hours-container h3 {
+        font-family: "Novecento Sans Web" serif;
+        color: #d99054;
+        font-size: 1.2rem;
+        text-transform: uppercase; }
+      #colophon .footer-container .business-hours-container p {
+        font-family: "Merriweather Web" sans-serif;
+        color: white; }
+        #colophon .footer-container .business-hours-container p .footer-bold {
+          font-weight: 700; }
+    #colophon .footer-container .inhabitent-footer-logo {
+      font-family: "Merriweather Web" sans-serif;
+      grid-area: logo;
+      margin-top: 48px;
+      justify-self: end; }
+      #colophon .footer-container .inhabitent-footer-logo img {
+        margin-top: 1rem;
+        width: 280px;
+        height: 50px; }
+    #colophon .footer-container .copyright-section {
+      grid-area: copyright;
+      font-size: 1rem; }
+      #colophon .footer-container .copyright-section .copyright_caps {
+        text-transform: uppercase; }
+
+article {
+  position: relative;
+  width: 70%; }
+  article img {
+    width: 100%;
+    height: auto; }
+  article h2 {
+    position: absolute;
+    top: 8px;
+    left: 16px; }
+  article .entry-meta {
+    position: absolute;
+    right: 0; }
+
+.entry-content {
+  margin-bottom: 200px; }
+
+.site-header {
+  border-bottom: 1px solid #e1e1e1; }
+
+.header-container {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template: [row1-start] "logo . nav-menu" 1fr [row1-end]; }
+  .header-container .site-description {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden; }
+  .header-container .site-description:focus {
+    clip: auto !important;
+    display: block;
+    height: auto;
+    left: 5px;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* above all content */ }
+  .header-container .site-branding {
+    grid-area: logo;
+    width: 50px; }
+  .header-container .main-navigation {
+    display: grid;
+    grid-area: nav-menu;
+    max-width: 300px;
+    justify-self: end; }
+    .header-container .main-navigation a {
+      margin-left: 5px;
+      margin-right: 5px; }
+
+.widget-area {
+  border-left: 1px solid #e1e1e1; }
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -668,6 +788,14 @@ a {
 .bypostauthor {
   display: block; }
 
+.site-content {
+  display: grid;
+  grid-template: [row1-start] "main main aside" [row1-end]; }
+  .site-content main {
+    grid-area: main; }
+  .site-content aside {
+    grid-area: aside; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -732,63 +860,3 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
-#colophon {
-  background-image: url("../../assets/images/dark-wood.png");
-  width: 100%; }
-  #colophon a {
-    text-decoration: none;
-    color: white; }
-  #colophon .footer-container {
-    display: grid;
-    width: 1120px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 20px;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-    justify-items: center;
-    grid-template: [row1-start] "contact hours logo logo" 4fr [row1-end] [row2-start] "copyright copyright copyright copyright" 1fr [row2-end]; }
-    #colophon .footer-container .contact-info-container {
-      grid-area: contact;
-      margin: 48px 0 48px 0; }
-      #colophon .footer-container .contact-info-container h3 {
-        font-family: "Novecento Sans Web" serif;
-        color: #d99054;
-        font-size: 1.2rem;
-        text-transform: uppercase; }
-      #colophon .footer-container .contact-info-container p {
-        font-family: "Merriweather Web" sans-serif;
-        color: white; }
-        #colophon .footer-container .contact-info-container p .fas {
-          margin-right: 5px; }
-      #colophon .footer-container .contact-info-container .fab {
-        color: white;
-        margin-right: 5px; }
-    #colophon .footer-container .business-hours-container {
-      grid-area: hours;
-      margin: 48px 0 48px 0; }
-      #colophon .footer-container .business-hours-container h3 {
-        font-family: "Novecento Sans Web" serif;
-        color: #d99054;
-        font-size: 1.2rem;
-        text-transform: uppercase; }
-      #colophon .footer-container .business-hours-container p {
-        font-family: "Merriweather Web" sans-serif;
-        color: white; }
-        #colophon .footer-container .business-hours-container p .footer-bold {
-          font-weight: 700; }
-    #colophon .footer-container .inhabitent-footer-logo {
-      font-family: "Merriweather Web" sans-serif;
-      grid-area: logo;
-      margin-top: 48px;
-      justify-self: end; }
-      #colophon .footer-container .inhabitent-footer-logo img {
-        margin-top: 1rem;
-        width: 280px;
-        height: 50px; }
-    #colophon .footer-container .copyright-section {
-      grid-area: copyright;
-      font-size: 1rem; }
-      #colophon .footer-container .copyright-section .copyright_caps {
-        text-transform: uppercase; }

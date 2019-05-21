@@ -1,0 +1,22 @@
+article {
+  position: relative;
+  width: 70%;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+  h2 {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+  }
+  .entry-meta {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.entry-content {
+  margin-bottom: 200px;
+}
