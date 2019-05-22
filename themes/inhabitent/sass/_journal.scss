@@ -1,22 +1,28 @@
-article {
-  position: relative;
-  width: 100%;
+.blog {
+  .site-content {
+    margin-top: 40px;
+  }
 
-  img {
+  article {
+    position: relative;
     width: 100%;
-    height: auto;
-  }
-  h2 {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-  }
-  .entry-meta {
-    position: absolute;
-    right: 0;
-  }
-}
 
-.entry-content {
-  margin-bottom: 200px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    h2 {
+      position: absolute;
+      top: 8px;
+      left: 16px;
+    }
+    .entry-meta {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .entry-content {
+    margin-bottom: 200px;
+  }
 }

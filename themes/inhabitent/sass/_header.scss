@@ -2,42 +2,50 @@
   border-bottom: 1px solid #e1e1e1;
 }
 
-.header-container {
-  display: grid;
-  align-items: center;
-  @include main-container-size;
-  grid-template: [row1-start] 'logo . nav-menu' 1fr [row1-end];
+.fixed-nav {
+  background-color: rgba($color: white, $alpha: 0.4);
+  position: fixed;
+  width: 100%;
+  height: 40px;
+  z-index: 5;
 
-  .site-description {
-    clip: rect(1px, 1px, 1px, 1px);
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-  }
-  .site-description:focus {
-    clip: auto !important;
-    display: block;
-    height: auto;
-    left: 5px;
-    top: 5px;
-    width: auto;
-    z-index: 100000; /* above all content */
-  }
-
-  .site-branding {
-    grid-area: logo;
-    width: 50px;
-  }
-  .main-navigation {
+  .header-container {
     display: grid;
-    grid-area: nav-menu;
-    max-width: 300px;
-    justify-self: end;
+    align-items: center;
+    @include main-container-size;
+    grid-template: [row1-start] 'logo . nav-menu' 1fr [row1-end];
 
-    a {
-      margin-left: 5px;
-      margin-right: 5px;
+    .site-description {
+      clip: rect(1px, 1px, 1px, 1px);
+      position: absolute !important;
+      height: 1px;
+      width: 1px;
+      overflow: hidden;
+    }
+    .site-description:focus {
+      clip: auto !important;
+      display: block;
+      height: auto;
+      left: 5px;
+      top: 5px;
+      width: auto;
+      z-index: 100000; /* above all content */
+    }
+
+    .site-branding {
+      grid-area: logo;
+      width: 50px;
+    }
+    .main-navigation {
+      display: grid;
+      grid-area: nav-menu;
+      max-width: 300px;
+      justify-self: end;
+
+      a {
+        margin-left: 5px;
+        margin-right: 5px;
+      }
     }
   }
 }
