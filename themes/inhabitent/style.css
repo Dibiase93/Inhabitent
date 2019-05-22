@@ -105,7 +105,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
         text-transform: uppercase; }
 
 .blog .site-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template: 'main aside';
   margin-top: 40px; }
+  .blog .site-content .content-area {
+    grid-area: main; }
+  .blog .site-content .widget-area {
+    grid-area: aside; }
 
 .blog article {
   position: relative;
@@ -821,21 +828,12 @@ a {
 .bypostauthor {
   display: block; }
 
-.site-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template: 'main aside'; }
-  .site-content .content-area {
-    grid-area: main; }
-  .site-content .widget-area {
-    grid-area: aside; }
-
-.page-id-6 .site-content {
+.page-about .site-content {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template: ' main '; }
 
-.page-id-6 .content-area {
+.page-about .content-area {
   grid-area: main; }
 
 /*--------------------------------------------------------------
@@ -902,3 +900,24 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.home .fp-journal h2 {
+  width: 100%; }
+
+.home .fp-journal .journal-entries {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  box-flex: wrap;
+  width: 30%; }
+  .home .fp-journal .journal-entries .journal-thumbnail {
+    width: 100%; }
+  .home .fp-journal .journal-entries .fp-post-method {
+    width: 100%; }
+  .home .fp-journal .journal-entries .fp-post-meta {
+    grid-area: article; }
+  .home .fp-journal .journal-entries h3 {
+    grid-area: article; }

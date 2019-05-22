@@ -3,3 +3,38 @@
 --------------------------------------------------------------*/
 
 /* Front page */
+.home {
+  .fp-journal {
+    // display: flex;
+    // flex-wrap: wrap;
+    // flex-direction: row;
+    // width: 100%;
+
+    h2 {
+      width: 100%;
+    }
+
+    .journal-entries {
+      display: flex;
+      flex-direction: column;
+      box-flex: wrap;
+      width: 25%;
+
+      .journal-thumbnail {
+        width: 25%;
+      }
+
+      .fp-post-method {
+        width: 25%;
+      }
+
+      //   .fp-post-meta {
+      //     grid-area: article;
+      //   }
+
+      h3 {
+        grid-area: article;
+      }
+    }
+  }
+}

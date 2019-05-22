@@ -47,29 +47,3 @@
 .bypostauthor {
   display: block;
 }
-
-.site-content {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template: 'main aside';
-
-  .content-area {
-    grid-area: main;
-  }
-
-  .widget-area {
-    grid-area: aside;
-  }
-}
-
-.page-id-6 {
-  .site-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template: ' main ';
-  }
-
-  .content-area {
-    grid-area: main;
-  }
-}
