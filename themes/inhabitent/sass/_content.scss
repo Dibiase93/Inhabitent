@@ -50,13 +50,26 @@
 
 .site-content {
   display: grid;
-  grid-template: [row1-start] 'main main aside' [row1-end];
+  grid-template-columns: 2fr 1fr;
+  grid-template: 'main aside';
 
-  main {
+  .content-area {
     grid-area: main;
   }
 
-  aside {
+  .widget-area {
     grid-area: aside;
+  }
+}
+
+.page-id-6 {
+  .site-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template: ' main ';
+  }
+
+  .content-area {
+    grid-area: main;
   }
 }

@@ -1,0 +1,40 @@
+.page-id-6 {
+  .entry-title {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
+  .entry-title:focus {
+    clip: auto !important;
+    display: block;
+    height: auto;
+    left: 5px;
+    top: 5px;
+    width: auto;
+    z-index: 100000; /* above all content */
+  }
+  .hero-image-header {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .entry-content {
+    display: flex;
+    flex-direction: column;
+    // text-align: center;
+    // justify-content: space-between;
+
+    h2 {
+      width: 50%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    p {
+      width: 60%;
+      margin: 0 auto;
+      text-align: left;
+    }
+  }
+}

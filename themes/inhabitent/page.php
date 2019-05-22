@@ -1,23 +1,19 @@
 <?php
-/**
- * The template for displaying all pages.
- *
- * @package RED_Starter_Theme
- */
 
-get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	get_header(); ?>
 
-			<?php while ( have_posts() ) : the_post(); ?>
+		<div id="primary" class="content-area">
+			<main id="main" class="site-main" role="main">
 
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php endwhile; // End of the loop. ?>
+					<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+				<?php endwhile; // End of the loop. ?>
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+			</main><!-- #main -->
+		</div><!-- #primary -->
+
+	<?php get_sidebar(); ?>
+	<?php get_footer(); ?>
