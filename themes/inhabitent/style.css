@@ -51,7 +51,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     color: white; }
   #colophon .footer-container {
     display: grid;
-    width: 1120px;
+    max-width: 1120px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 20px;
@@ -145,7 +145,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 1120px;
+    max-width: 1120px;
     margin-left: auto;
     margin-right: auto;
     grid-template: [row1-start] "logo . nav-menu" 1fr [row1-end]; }
@@ -178,6 +178,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 .widget-area {
   border-left: 1px solid #e1e1e1; }
+
+.page-about .site-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template: ' main '; }
+
+.page-about .content-area {
+  grid-area: main; }
 
 .page-about .hero-image-header {
   width: 100%;
@@ -828,14 +836,6 @@ a {
 .bypostauthor {
   display: block; }
 
-.page-about .site-content {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template: ' main '; }
-
-.page-about .content-area {
-  grid-area: main; }
-
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -900,24 +900,85 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
-.home .fp-journal h2 {
-  width: 100%; }
-
-.home .fp-journal .journal-entries {
+.home .hp-banner-container {
+  margin-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .home .hp-banner-container .hp-hero-banner {
+    position: relative; }
+    .home .hp-banner-container .hp-hero-banner img {
+      height: 100vh;
+      width: 100%; }
+  .home .hp-banner-container .hp-banner-logo {
+    position: absolute; }
+    .home .hp-banner-container .hp-banner-logo img {
+      width: 100%; }
+
+.home .shop-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto; }
+  .home .shop-container h2 {
+    width: 100%; }
+  .home .shop-container .product-terms {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .home .shop-container .product-terms .shop-terms {
+      width: 23%;
+      border: 1px solid #e1e1e1; }
+      .home .shop-container .product-terms .shop-terms img {
+        width: 25%; }
+
+.home .fp-journal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  box-flex: wrap;
-  width: 30%; }
-  .home .fp-journal .journal-entries .journal-thumbnail {
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-align: center;
+  width: 100%;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto; }
+  .home .fp-journal h2 {
     width: 100%; }
-  .home .fp-journal .journal-entries .fp-post-method {
-    width: 100%; }
-  .home .fp-journal .journal-entries .fp-post-meta {
-    grid-area: article; }
-  .home .fp-journal .journal-entries h3 {
-    grid-area: article; }
+  .home .fp-journal .journal-entries {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    box-flex: wrap;
+    width: 100%;
+    position: relative; }
+    .home .fp-journal .journal-entries .fp-journal-content {
+      width: 100%;
+      max-width: 35%;
+      border: 1px solid #e1e1e1;
+      margin: 10px; }
+    .home .fp-journal .journal-entries .journal-thumbnail img {
+      max-height: 225px; }

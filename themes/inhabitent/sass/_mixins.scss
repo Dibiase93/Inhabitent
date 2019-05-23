@@ -13,7 +13,7 @@
 
 //website container with with auto margin left and right
 @mixin main-container-size {
-  width: $website__width;
+  max-width: $website__width;
   margin-left: auto;
   margin-right: auto;
 }

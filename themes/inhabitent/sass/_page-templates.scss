@@ -3,12 +3,64 @@
 --------------------------------------------------------------*/
 
 /* Front page */
+
 .home {
+  .hp-banner-container {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .hp-hero-banner {
+      position: relative;
+
+      img {
+        height: 100vh;
+        width: 100%;
+      }
+    }
+    .hp-banner-logo {
+      position: absolute;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .shop-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    @include main-container-size;
+
+    h2 {
+      width: 100%;
+    }
+
+    .product-terms {
+      display: flex;
+      text-align: center;
+      justify-content: space-between;
+
+      .shop-terms {
+        width: 23%;
+        border: 1px solid #e1e1e1;
+
+        img {
+          width: 25%;
+        }
+      }
+    }
+  }
+
   .fp-journal {
-    // display: flex;
-    // flex-wrap: wrap;
-    // flex-direction: row;
-    // width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+    @include main-container-size;
 
     h2 {
       width: 100%;
@@ -16,24 +68,22 @@
 
     .journal-entries {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       box-flex: wrap;
-      width: 25%;
+      width: 100%;
+      position: relative;
+
+      .fp-journal-content {
+        width: 100%;
+        max-width: 35%;
+        border: 1px solid #e1e1e1;
+        margin: 10px;
+      }
 
       .journal-thumbnail {
-        width: 25%;
-      }
-
-      .fp-post-method {
-        width: 25%;
-      }
-
-      //   .fp-post-meta {
-      //     grid-area: article;
-      //   }
-
-      h3 {
-        grid-area: article;
+        img {
+          max-height: 225px;
+        }
       }
     }
   }
