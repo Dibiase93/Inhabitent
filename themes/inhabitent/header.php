@@ -19,7 +19,7 @@
 			<div class="fixed-nav">
 			<div class="header-container">
 				<div class="site-branding">
-					<img src="<?php echo get_template_directory_uri();?>/assets/images/logos/inhabitent-logo-tent.svg" alt="inhabitent brand logo">
+					<a href="http://localhost:8888/inhabitent/"><img src="<?php echo get_template_directory_uri();?>/assets/images/logos/inhabitent-logo-tent.svg" alt="inhabitent brand logo"></a>
 					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 				</div><!-- .site-branding -->

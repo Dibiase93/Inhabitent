@@ -21,7 +21,7 @@ get_header(); ?>
 			</div>
 
 		<section class="shop-container">
-			<h2>Shop Stuff</h2>
+				<h2>Shop Stuff</h2>
 			    <?php
 				$terms = get_terms( 
 					array(
@@ -30,7 +30,7 @@ get_header(); ?>
 					)	
 				 ); 
 				 ?>
-			    <div class="product-terms">
+			<div class="product-terms">
 					<?php	 
 				 	foreach($terms as $term):
 					?>
