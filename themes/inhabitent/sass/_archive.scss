@@ -1,0 +1,87 @@
+.archive {
+  .site-main {
+    @include main-container-size;
+
+    .shop-container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+      //   flex for product terms and h2
+      h2 {
+        width: 100%;
+      }
+      .product-terms {
+        width: 30%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 'shop-term shop-term shop-term shop-term';
+
+        .shop-terms {
+          a {
+            grid-area: shop-term;
+          }
+        }
+      }
+    }
+  }
+
+  .article-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1.5rem;
+    width: 100%;
+
+    article {
+      width: 100%;
+      border: 1px solid black;
+      margin: 0;
+
+      img {
+        height: 200px;
+      }
+
+      .entry-content {
+        margin: 0;
+      }
+
+      .product-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: flex-end;
+        padding: 12px 0 12px 16px;
+        position: relative;
+
+        h2 {
+          margin: 0;
+
+          &::before {
+            content: '...............';
+            white-space: nowrap;
+            float: right;
+            width: 0;
+            box-sizing: inherit;
+          }
+          a {
+            font-size: 1rem;
+            text-decoration: none;
+            font-family: 'Merriweather Web', serif;
+            font-weight: 400;
+            margin-right: 5px;
+          }
+        }
+
+        .entry-price {
+          font-family: 'Merriweather Web', serif;
+          background: white;
+          border-right: solid 16px white;
+          margin-left: 5px;
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+  }
+}
