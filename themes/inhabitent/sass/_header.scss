@@ -1,5 +1,6 @@
 .site-header {
   border-bottom: 1px solid #e1e1e1;
+  padding: 8px 0 8px 0;
 }
 
 .fixed-nav {
@@ -52,6 +53,12 @@
         label {
           order: 2;
         }
+        fieldset {
+          border: none;
+          a {
+            padding: 0 12px 0 12px;
+          }
+        }
       }
 
       input[type='search'] {
@@ -60,8 +67,15 @@
       }
 
       a {
-        margin-left: 5px;
-        margin-right: 5px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #248a83;
+        line-height: 1.75;
+        padding-left: 24px;
+
+        &:hover {
+          color: #2f1339;
+        }
       }
     }
   }

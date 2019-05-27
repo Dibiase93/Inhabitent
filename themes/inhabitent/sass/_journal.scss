@@ -4,6 +4,7 @@
     grid-template-columns: 2fr 1fr;
     grid-template: 'main aside';
     margin-top: 40px;
+    @include main-container-size;
 
     .content-area {
       grid-area: main;

@@ -1,6 +1,8 @@
 .archive {
   .site-main {
     @include main-container-size;
+    margin-top: 48px;
+    margin-bottom: 72px;
 
     .shop-container {
       width: 100%;
@@ -8,19 +10,36 @@
       flex-wrap: wrap;
       text-align: center;
       justify-content: center;
+      border-bottom: 1px dashed #c8c8c8;
+      margin-bottom: 48px;
       //   flex for product terms and h2
-      h2 {
+      h1 {
         width: 100%;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        font-size: 2.4rem;
+        letter-spacing: 2px;
+        margin-top: 0;
       }
       .product-terms {
         width: 30%;
         display: grid;
+        grid-column-gap: 24px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-areas: 'shop-term shop-term shop-term shop-term';
+        margin-bottom: 3rem;
 
         .shop-terms {
           a {
             grid-area: shop-term;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #248a83;
+            font-size: 1.2rem;
+
+            &:hover {
+              color: #2f1339;
+            }
           }
         }
       }
@@ -56,9 +75,10 @@
 
         h2 {
           margin: 0;
+          font-weight: 400;
 
           &::before {
-            content: '...............';
+            content: '..................';
             white-space: nowrap;
             float: right;
             width: 0;
@@ -69,7 +89,14 @@
             text-decoration: none;
             font-family: 'Merriweather Web', serif;
             font-weight: 400;
-            margin-right: 5px;
+            margin-right: 3px;
+            color: #2f1339;
+            &:visited {
+              color: #2f1339;
+            }
+            &:hover {
+              color: #248a83;
+            }
           }
         }
 
@@ -77,6 +104,7 @@
           font-family: 'Merriweather Web', serif;
           background: white;
           border-right: solid 16px white;
+          border-left: solid 3px white;
           margin-left: 5px;
           position: absolute;
           right: 0;

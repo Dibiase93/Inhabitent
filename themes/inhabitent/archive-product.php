@@ -8,7 +8,7 @@ get_header(); ?>
 
 			<header class="page-header">
             <section class="shop-container">
-				<h2>Shop Stuff</h2>
+				<h1>Shop Stuff</h1>
 			    <?php
 				$terms = get_terms( 
 					array(
@@ -46,7 +46,9 @@ get_header(); ?>
                      
                     
                         <?php if ( has_post_thumbnail() ) : ?>
-                            <?php the_post_thumbnail( 'large' ); ?>
+                            <a href="<?php the_permalink(); ?>" rel="bookmark">
+                                <?php the_post_thumbnail( 'large' ); ?>
+                            </a>
                         <?php endif; ?>
                         
                         <div class="product-content">

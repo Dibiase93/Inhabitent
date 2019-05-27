@@ -42,6 +42,7 @@ function inhabitent_login_url( $url ) {
 }
 add_filter( 'login_headerurl', 'inhabitent_login_url' );
 
+
 function inhabitent_body_class_for_pages( $classes ) {
     if ( is_singular( 'page' ) ) {
         global $post;
