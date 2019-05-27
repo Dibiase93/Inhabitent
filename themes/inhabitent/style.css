@@ -108,10 +108,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template: 'main aside';
-  margin-top: 40px;
-  max-width: 1120px;
-  margin-left: auto;
-  margin-right: auto; }
+  margin-top: 40px; }
   .blog .site-content .content-area {
     grid-area: main; }
   .blog .site-content .widget-area {
@@ -333,7 +330,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
         margin: 0;
         font-weight: 400; }
         .archive .article-container article .product-content h2::before {
-          content: '..................';
+          content: '...............';
           white-space: nowrap;
           float: right;
           width: 0;
@@ -408,6 +405,27 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
         background: white;
         text-align: center;
         border: 1px solid black; }
+
+.page-find-us .site-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template: 'main aside';
+  margin-top: 40px; }
+  .page-find-us .site-content .content-area {
+    grid-area: main; }
+  .page-find-us .site-content .widget-area {
+    grid-area: aside; }
+
+.page-find-us .site-content {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto; }
+  .page-find-us .site-content .content-area {
+    padding: 48px 56px 48px 0; }
+    .page-find-us .site-content .content-area iframe {
+      height: 300px; }
+  .page-find-us .site-content .entry-content {
+    margin-top: 24px; }
 
 html {
   font-family: sans-serif;

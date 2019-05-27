@@ -61,6 +61,7 @@ get_header(); ?>
 				$journal_posts = get_posts( $args );
 				?>
 				<?php foreach ( $journal_posts as $post ) : setup_postdata( $post ); ?>
+				
 				<!-- <div class="thumbnail"> -->
 
 				<div class="fp-journal-content">
@@ -87,6 +88,46 @@ get_header(); ?>
 				  </div>				
 			
 		  </section>
+
+		  <section class="fp-journal">
+			<h2>Inhabitent Journal</h2>
+			<div class="journal-entries">
+				<?php 
+				$args = array(  'post_type' => 'adventure',
+								 'numberposts' => '4', 
+				);
+				$adventure_posts = get_posts( $args );
+				?>
+				<?php foreach ( $adventure_posts as $post ) : setup_postdata( $post ); ?>
+				
+				<!-- <div class="thumbnail"> -->
+
+				<div class="fp-journal-content">
+				<?php if ( has_post_thumbnail() ) : ?>
+    			<a class="journal-thumbnail" href="<?php the_permalink(); ?>" title="<?php the_title()?>">
+        			<?php the_post_thumbnail('large'); ?>
+				   </a>
+				   
+				<?php endif; ?>
+				<!-- </div> -->
+				<!-- post author and date -->
+				<div class = "fp-post-meta">
+					<?php echo get_the_date(); ?>
+					<?php echo get_comments_number(); ?> Comments
+				</div>
+
+				  <!-- post title -->
+                <h3>
+					<a href="<?php the_permalink(); ?>"><h2><?php the_title()?></h2></a>
+					<a class="read-more-btn" href="<?php the_permalink(); ?>">Read More</a>
+				</h3>
+				</div>
+				  <?php endforeach; wp_reset_postdata(); ?>
+				  </div>				
+			
+		  </section>
+
+		 
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
