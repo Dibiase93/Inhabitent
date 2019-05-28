@@ -1,4 +1,17 @@
 .archive {
+  .product-type {
+    text-align: center;
+    border-bottom: 1px dashed #c8c8c8;
+    margin-bottom: 48px;
+
+    h1 {
+      text-transform: uppercase;
+    }
+
+    .taxonomy-description {
+      font-family: 'Merriweather Web', serif;
+    }
+  }
   .site-main {
     @include main-container-size;
     margin-top: 48px;
@@ -78,7 +91,7 @@
           font-weight: 400;
 
           &::before {
-            content: '...............';
+            content: '..................';
             white-space: nowrap;
             float: right;
             width: 0;

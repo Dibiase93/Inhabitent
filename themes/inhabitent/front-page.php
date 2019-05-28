@@ -89,9 +89,9 @@ get_header(); ?>
 			
 		  </section>
 
-		  <section class="fp-journal">
-			<h2>Inhabitent Journal</h2>
-			<div class="journal-entries">
+		  <section class="fp-adventure">
+			<h2>Latest Adventures</h2>
+		<div class="adventure-entries">
 				<?php 
 				$args = array(  'post_type' => 'adventure',
 								 'numberposts' => '4', 
@@ -102,30 +102,26 @@ get_header(); ?>
 				
 				<!-- <div class="thumbnail"> -->
 
-				<div class="fp-journal-content">
+			<div class="fp-adventure-content">
+				
 				<?php if ( has_post_thumbnail() ) : ?>
-    			<a class="journal-thumbnail" href="<?php the_permalink(); ?>" title="<?php the_title()?>">
+				<div class="adventure-thumbnail">
+    			<a href="<?php the_permalink(); ?>" title="<?php the_title()?>">
         			<?php the_post_thumbnail('large'); ?>
-				   </a>
+			   </a>
+				   </div>
 				   
 				<?php endif; ?>
-				<!-- </div> -->
-				<!-- post author and date -->
-				<div class = "fp-post-meta">
-					<?php echo get_the_date(); ?>
-					<?php echo get_comments_number(); ?> Comments
-				</div>
-
-				  <!-- post title -->
+			
                 <h3>
 					<a href="<?php the_permalink(); ?>"><h2><?php the_title()?></h2></a>
 					<a class="read-more-btn" href="<?php the_permalink(); ?>">Read More</a>
 				</h3>
-				</div>
+			</div>
 				  <?php endforeach; wp_reset_postdata(); ?>
-				  </div>				
+		</div>				
 			
-		  </section>
+			 </section>
 
 		 
 

@@ -104,4 +104,47 @@
       }
     }
   }
+
+  .fp-adventure {
+    @include main-container-size;
+    display: flex;
+    flex-wrap: wrap;
+
+    h2 {
+      width: 100%;
+    }
+
+    .adventure-entries {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 25% 25% 25% 25%;
+      grid-template:
+        'one one two two'
+        'one one two two'
+        'one one three four'
+        'one one three four';
+
+      .fp-adventure-content {
+        position: relative;
+        &:nth-child(1) {
+          grid-area: one;
+          align-self: stretch;
+        }
+        &:nth-child(2) {
+          grid-area: two;
+        }
+        &:nth-child(3) {
+          grid-area: three;
+        }
+        &:nth-child(4) {
+          grid-area: four;
+        }
+
+        h3 {
+          position: absolute;
+          top: 0;
+        }
+      }
+    }
+  }
 }
