@@ -8,6 +8,7 @@ get_header(); ?>
 
         <header class="product-type">
                 <?php
+                
                     the_archive_title( '<h1 class="page-title">', '</h1>' );
                     the_archive_description( '<div class="taxonomy-description">', '</div>' );
                 ?>

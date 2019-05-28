@@ -436,9 +436,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   .page-find-us .site-content .entry-content {
     margin-top: 24px; }
 
-tax-product-type article {
-  background-color: red; }
-
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -1238,15 +1235,21 @@ object {
     width: 100%; }
   .home .fp-adventure .adventure-entries {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 25% 25% 25% 25%;
-    grid-template: 'one one two two' 'one one two two' 'one one three four' 'one one three four'; }
+    min-height: 500px;
+    overflow: hidden;
+    grid-template: 'one one two two' 'one one three four';
+    grid-gap: 20px 20px; }
     .home .fp-adventure .adventure-entries .fp-adventure-content {
+      height: 100%;
       position: relative; }
+      .home .fp-adventure .adventure-entries .fp-adventure-content .adventure-thumbnail {
+        height: 100%; }
+        .home .fp-adventure .adventure-entries .fp-adventure-content .adventure-thumbnail img {
+          height: 100%;
+          -o-object-fit: fill;
+             object-fit: fill; }
       .home .fp-adventure .adventure-entries .fp-adventure-content:nth-child(1) {
-        grid-area: one;
-        -ms-flex-item-align: stretch;
-            align-self: stretch; }
+        grid-area: one; }
       .home .fp-adventure .adventure-entries .fp-adventure-content:nth-child(2) {
         grid-area: two; }
       .home .fp-adventure .adventure-entries .fp-adventure-content:nth-child(3) {

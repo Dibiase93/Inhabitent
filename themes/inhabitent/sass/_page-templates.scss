@@ -116,19 +116,27 @@
 
     .adventure-entries {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 25% 25% 25% 25%;
+      min-height: 500px;
+      overflow: hidden;
       grid-template:
         'one one two two'
-        'one one two two'
-        'one one three four'
         'one one three four';
+      grid-gap: 20px 20px;
 
       .fp-adventure-content {
+        height: 100%;
         position: relative;
+
+        .adventure-thumbnail {
+          height: 100%;
+          img {
+            height: 100%;
+            object-fit: fill;
+          }
+        }
+
         &:nth-child(1) {
           grid-area: one;
-          align-self: stretch;
         }
         &:nth-child(2) {
           grid-area: two;

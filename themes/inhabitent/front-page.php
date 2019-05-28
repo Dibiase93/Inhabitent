@@ -106,10 +106,10 @@ get_header(); ?>
 				
 				<?php if ( has_post_thumbnail() ) : ?>
 				<div class="adventure-thumbnail">
-    			<a href="<?php the_permalink(); ?>" title="<?php the_title()?>">
-        			<?php the_post_thumbnail('large'); ?>
-			   </a>
-				   </div>
+    				<a href="<?php the_permalink(); ?>" title="<?php the_title()?>">
+        				<?php the_post_thumbnail('large'); ?>
+			   		</a>
+				</div>
 				   
 				<?php endif; ?>
 			
@@ -117,12 +117,16 @@ get_header(); ?>
 					<a href="<?php the_permalink(); ?>"><h2><?php the_title()?></h2></a>
 					<a class="read-more-btn" href="<?php the_permalink(); ?>">Read More</a>
 				</h3>
+
+				
 			</div>
 				  <?php endforeach; wp_reset_postdata(); ?>
-		</div>				
-			
+		</div>	
+		
+		<a href="<?php echo get_post_type_archive_link( 'adventure' ); ?>">More Adventures</a>
 			 </section>
-
+			 
+			
 		 
 
 		</main><!-- #main -->
