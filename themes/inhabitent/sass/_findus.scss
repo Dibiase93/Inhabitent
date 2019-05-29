@@ -18,3 +18,45 @@
     }
   }
 }
+
+.search {
+  @include side-bar;
+
+  .site-content {
+    @include main_container_size;
+
+    .content-area {
+      padding: 48px 56px 48px 0;
+      margin-top: 60px;
+
+      iframe {
+        height: 300px;
+      }
+    }
+
+    .entry-content {
+      margin-top: 24px;
+    }
+  }
+}
+
+.error404 {
+  @include side-bar;
+
+  .site-content {
+    @include main_container_size;
+
+    .content-area {
+      padding: 48px 56px 48px 0;
+      margin-top: 60px;
+
+      iframe {
+        height: 300px;
+      }
+    }
+
+    .entry-content {
+      margin-top: 24px;
+    }
+  }
+}

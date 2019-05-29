@@ -335,23 +335,24 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     text-align: left;
     padding: 20px; }
 
-.post-type-archive .product-type {
+.archive .content-area {
+  padding-top: 60px; }
+
+.archive .product-type {
   text-align: center;
   border-bottom: 1px dashed #c8c8c8;
   margin-bottom: 48px; }
-  .post-type-archive .product-type header {
-    position: static; }
-  .post-type-archive .product-type h1 {
+  .archive .product-type h1 {
     text-transform: uppercase; }
-  .post-type-archive .product-type .taxonomy-description {
+  .archive .product-type .taxonomy-description {
     font-family: 'Merriweather Web', serif; }
 
-.post-type-archive .site-main {
+.archive .site-main {
   max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 72px; }
-  .post-type-archive .site-main .shop-container {
+  .archive .site-main .shop-container {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -364,43 +365,43 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
             justify-content: center;
     border-bottom: 1px dashed #c8c8c8;
     margin-bottom: 48px; }
-    .post-type-archive .site-main .shop-container h1 {
+    .archive .site-main .shop-container h1 {
       width: 100%;
       margin-bottom: 8px;
       text-transform: uppercase;
       font-size: 2.4rem;
       letter-spacing: 2px;
       margin-top: 0; }
-    .post-type-archive .site-main .shop-container .product-terms {
+    .archive .site-main .shop-container .product-terms {
       width: 30%;
       display: grid;
       grid-column-gap: 24px;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-areas: 'shop-term shop-term shop-term shop-term';
       margin-bottom: 3rem; }
-      .post-type-archive .site-main .shop-container .product-terms .shop-terms a {
+      .archive .site-main .shop-container .product-terms .shop-terms a {
         grid-area: shop-term;
         text-decoration: none;
         text-transform: uppercase;
         color: #248a83;
         font-size: 1.2rem; }
-        .post-type-archive .site-main .shop-container .product-terms .shop-terms a:hover {
+        .archive .site-main .shop-container .product-terms .shop-terms a:hover {
           color: #2f1339; }
 
-.post-type-archive .article-container {
+.archive .article-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 1.5rem;
   width: 100%; }
-  .post-type-archive .article-container article {
+  .archive .article-container article {
     width: 100%;
     border: 1px solid #e1e1e1;
     margin: 0; }
-    .post-type-archive .article-container article img {
+    .archive .article-container article img {
       height: 200px; }
-    .post-type-archive .article-container article .entry-content {
+    .archive .article-container article .entry-content {
       margin: 0; }
-    .post-type-archive .article-container article .product-content {
+    .archive .article-container article .product-content {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -415,17 +416,17 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       padding: 12px 16px 12px 16px;
       position: relative;
       overflow: hidden; }
-      .post-type-archive .article-container article .product-content h2 {
+      .archive .article-container article .product-content h2 {
         margin: 0;
         font-weight: 400; }
-        .post-type-archive .article-container article .product-content h2::before {
+        .archive .article-container article .product-content h2::before {
           content: '.....................';
           white-space: nowrap;
           float: right;
           width: 0;
           -webkit-box-sizing: inherit;
                   box-sizing: inherit; }
-        .post-type-archive .article-container article .product-content h2 a {
+        .archive .article-container article .product-content h2 a {
           font-size: 1rem;
           text-decoration: none;
           font-family: 'Merriweather Web', serif;
@@ -433,11 +434,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
           margin-right: 3px;
           color: #2f1339;
           overflow: hidden; }
-          .post-type-archive .article-container article .product-content h2 a:visited {
+          .archive .article-container article .product-content h2 a:visited {
             color: #2f1339; }
-          .post-type-archive .article-container article .product-content h2 a:hover {
+          .archive .article-container article .product-content h2 a:hover {
             color: #248a83; }
-      .post-type-archive .article-container article .product-content .entry-price {
+      .archive .article-container article .product-content .entry-price {
         font-family: 'Merriweather Web', serif;
         background: white;
         border-left: solid 3px white;
@@ -446,7 +447,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
         right: 0; }
 
 .single-product .content-area {
-  padding: 48px 0 48px 0; }
+  padding: 60px 0 48px 0; }
 
 .single-product article {
   display: -webkit-box;
@@ -514,6 +515,48 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     .page-find-us .site-content .content-area iframe {
       height: 300px; }
   .page-find-us .site-content .entry-content {
+    margin-top: 24px; }
+
+.search .site-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template: 'main aside'; }
+  .search .site-content .content-area {
+    grid-area: main; }
+  .search .site-content .widget-area {
+    grid-area: aside; }
+
+.search .site-content {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto; }
+  .search .site-content .content-area {
+    padding: 48px 56px 48px 0;
+    margin-top: 60px; }
+    .search .site-content .content-area iframe {
+      height: 300px; }
+  .search .site-content .entry-content {
+    margin-top: 24px; }
+
+.error404 .site-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template: 'main aside'; }
+  .error404 .site-content .content-area {
+    grid-area: main; }
+  .error404 .site-content .widget-area {
+    grid-area: aside; }
+
+.error404 .site-content {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto; }
+  .error404 .site-content .content-area {
+    padding: 48px 56px 48px 0;
+    margin-top: 60px; }
+    .error404 .site-content .content-area iframe {
+      height: 300px; }
+  .error404 .site-content .entry-content {
     margin-top: 24px; }
 
 html {

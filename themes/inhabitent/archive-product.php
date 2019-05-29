@@ -1,4 +1,3 @@
-
 <?php
 get_header(); ?>
 
@@ -6,10 +5,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
-        <header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-			
+
             <section class="shop-container">
 				<h1>Shop Stuff</h1>
 			    <?php
@@ -37,7 +33,6 @@ get_header(); ?>
 		    </div> 
 			<!-- end of producte terms -->
 		</section>
-			
 
             <?php /* Start the Loop */ ?>
             
@@ -49,9 +44,7 @@ get_header(); ?>
                      
                     
                         <?php if ( has_post_thumbnail() ) : ?>
-                            <a href="<?php the_permalink(); ?>" rel="bookmark">
-                                <?php the_post_thumbnail( 'large' ); ?>
-                            </a>
+                            <?php the_post_thumbnail( 'large' ); ?>
                         <?php endif; ?>
                         
                         <div class="product-content">
@@ -83,3 +76,4 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+    <?php get_footer(); ?>

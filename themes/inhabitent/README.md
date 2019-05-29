@@ -1,21 +1,15 @@
-# RED Starter
+# Inhabitent
 
-A WordPress starter theme for RED Academy students, forked from Underscores.
+This is our 4th project at RED. This was one of the most challenging projects we've had. It was cool to learn how to use the base of wordpress to build our own custom theme.
 
-## Installation
+## Instructions
 
-### 1. Download me (don't clone me!)
+Simply open link provided.
 
-Then add me to your `wp-content` directory.
+### Challenges
 
-### 2. Rename the `redstarter-master` directory
+Trying to finish the project in the time given. More time would have been nice to get everything how I wanted. I ran out of time so had to cut a few corners to hand it in by the due date.
 
-Make sure that the theme directory name is project appropriate!
+#### Learning Curve
 
-### 3. Install the dev dependencies
-
-Next you'll need to run `npm install` **inside your theme directory** next to install the node modules you'll need for Gulp, etc.
-
-### 4. Update the proxy in `gulpfile.js`
-
-Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Browsersync proxy (so change `localhost[:port-here]/[your-dir-name-here]` to the appropriate localhost URL).
+Learning how to deal and manage many files. At first it felt very over whelming, but by the end I started getting a hang of where to find everything.
