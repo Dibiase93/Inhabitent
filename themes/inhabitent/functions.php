@@ -80,7 +80,7 @@ function red_starter_minified_css( $stylesheet_uri, $stylesheet_dir_uri ) {
 add_filter( 'stylesheet_uri', 'red_starter_minified_css', 10, 2 );
 
 /**
- *  scripts and styles.
+ * Enqueue scripts and styles.
  */
 function inhabitent_scripts() {
 	wp_enqueue_style( 'inhabitent-style', get_stylesheet_uri() );

@@ -1,62 +1,43 @@
 <?php
+/**
+ * The template for displaying all single posts.
+ *
+ * @package RED_Starter_Theme
+ */
+
 get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
-			<header class="page-header">
-            <section class="fp-adventure">
-			<h2>Latest Adventures</h2>
-		<div class="adventure-entries">
-				<?php 
-				$args = array(  'post_type' => 'adventure',
-								 'numberposts' => '4', 
-				);
-				$adventure_posts = get_posts( $args );
-				?>
-				<?php foreach ( $adventure_posts as $post ) : setup_postdata( $post ); ?>
-				
-				<!-- <div class="thumbnail"> -->
-
-			<div class="fp-adventure-content">
-				
-				<?php if ( has_post_thumbnail() ) : ?>
-				<div class="adventure-thumbnail">
-    				<a href="<?php the_permalink(); ?>" title="<?php the_title()?>">
-        				<?php the_post_thumbnail('large'); ?>
-			   		</a>
-				</div>
-				   
-				<?php endif; ?>
 			
-                <h3>
-					<a href="<?php the_permalink(); ?>"><h2><?php the_title()?></h2></a>
-					<a class="read-more-btn" href="<?php the_permalink(); ?>">Read More</a>
-				</h3>
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                    <header class="entry-header">
+                        <?php if ( has_post_thumbnail() ) : ?>
+                            <?php the_post_thumbnail( 'large' ); ?>
+                        <?php endif; ?>
 
-				<a href="<?php the_permalink(); ?>"><h4>More Adventure</h4></a>
-			</div>
-				  <?php endforeach; wp_reset_postdata(); ?>
-		</div>	
-		
-			
-			 </section>
-			</header><!-- .page-header -->
+                        <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
-            <?php /* Start the Loop */ ?>
-            
+                        <?php if ( 'post' === get_post_type() ) : ?>
+                        <div class="entry-meta">
+                            <?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php red_starter_posted_by(); ?>
+                        </div><!-- .entry-meta -->
+                        <?php endif; ?>
+                    </header><!-- .entry-header -->
 
+                    <div class="entry-content">
+                        <?php the_excerpt(); ?>
+                    </div><!-- .entry-content -->
 
-            </div>
-			<?php the_posts_navigation(); ?>
+                    <div class="read-more-btn">
+						<a href="<?php the_permalink(); ?>">Read More &rarr;</a>
+					</div>
+                </article><!-- #post-## -->
 
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-		<?php endif; ?>
+		<?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

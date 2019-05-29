@@ -1,16 +1,25 @@
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-
 /* Front page */
 
 .home {
+  h2 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 3.75rem;
+    margin-top: 3.75rem;
+    width: 100%;
+    text-align: center;
+  }
   .hp-banner-container {
     display: flex;
     justify-content: center;
     align-items: center;
 
     .hp-hero-banner {
+      margin-top: 60px;
       max-height: 100vh;
       overflow: hidden;
       position: relative;
@@ -51,10 +60,6 @@
     text-align: center;
     @include main-container-size;
 
-    h2 {
-      width: 100%;
-    }
-
     .product-terms {
       display: flex;
       text-align: center;
@@ -63,6 +68,21 @@
       .shop-terms {
         width: 23%;
         border: 1px solid #e1e1e1;
+        border-top: 5px solid #e1e1e1;
+        padding-top: 13.5px;
+
+        p {
+          padding: 0 30px 0 10px;
+
+          a {
+            padding: 12px 24px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            text-decoration: none;
+            background-color: #248a83;
+            color: white;
+          }
+        }
 
         img {
           width: 25%;
@@ -79,10 +99,6 @@
     width: 100%;
     @include main-container-size;
 
-    h2 {
-      width: 100%;
-    }
-
     .journal-entries {
       display: flex;
       flex-direction: row;
@@ -95,6 +111,30 @@
         max-width: 35%;
         border: 1px solid #e1e1e1;
         margin: 10px;
+
+        .journal-title-btn {
+          width: 80%;
+          text-align: left;
+          padding: 13.5px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          a {
+            text-decoration: none;
+            font-size: 1.3rem;
+          }
+          .read-more-btn {
+            width: 100%;
+
+            a {
+              color: black;
+              padding: 12px 24px;
+              font-size: 0.9rem;
+              border: 1px solid black;
+              text-transform: uppercase;
+            }
+          }
+        }
       }
 
       .journal-thumbnail {
@@ -109,23 +149,35 @@
     @include main-container-size;
     display: flex;
     flex-wrap: wrap;
-
-    h2 {
-      width: 100%;
-    }
+    margin-bottom: 72px;
 
     .adventure-entries {
       display: grid;
-      min-height: 500px;
-      overflow: hidden;
       grid-template:
-        'one one two two'
-        'one one three four';
+        'one one two two' 50%
+        'one one three four' 50%;
       grid-gap: 20px 20px;
+      max-height: 550px;
 
       .fp-adventure-content {
         height: 100%;
         position: relative;
+        &::after {
+          display: block;
+          position: absolute;
+          background-image: linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+          );
+          height: 100%;
+          width: 100%;
+          content: ' ';
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: 9;
+        }
 
         .adventure-thumbnail {
           height: 100%;
@@ -140,18 +192,74 @@
         }
         &:nth-child(2) {
           grid-area: two;
+
+          h3 {
+            font-size: 2.4rem;
+          }
         }
         &:nth-child(3) {
           grid-area: three;
+
+          h3 {
+            font-size: 1.6rem;
+          }
         }
         &:nth-child(4) {
           grid-area: four;
+          h3 {
+            font-size: 1.6rem;
+          }
         }
 
-        h3 {
+        .adventure-text {
           position: absolute;
           top: 0;
+          font-size: 3rem;
+          font-weight: 400;
+          margin: 24px;
+          z-index: 10;
+
+          h3 {
+            margin: 0;
+          }
+
+          .read-more-btn {
+            a {
+              font-family: 'Novecento Sans Web', sans-serif;
+              padding: 12px 24px;
+              font-size: 0.9rem;
+              border: 1px solid white;
+              text-transform: uppercase;
+              position: absolute;
+
+              &:hover {
+                background-color: #248a83;
+              }
+            }
+          }
+          a {
+            color: white;
+            font-family: 'Merriweather Web', serif;
+            text-decoration: none;
+            font-weight: normal;
+          }
         }
+      }
+    }
+
+    .more-adventures {
+      width: 100%;
+      margin: 36px 0 24px 0;
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: normal;
+        padding: 12px 24px;
+        font-size: 0.9rem;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        background-color: #248a83;
       }
     }
   }

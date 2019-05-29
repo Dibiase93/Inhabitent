@@ -3,15 +3,57 @@
 --------------------------------------------------------------*/
 
 .widget {
-	margin: 0 0 $base__space-unit;
+  margin: 0 0 $base__space-unit;
 
-	/* Make sure select elements fit in widgets. */
-	select {
-		max-width: 100%;
-	}
+  /* Make sure select elements fit in widgets. */
+  select {
+    max-width: 100%;
+  }
 }
 
 /* Search widget. */
 .widget_search .search-submit {
-	display: none;
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: #248a83;
+}
+
+.widget-area {
+  margin-top: 60px;
+  border-left: 1px solid #e1e1e1;
+  padding: 54px 0 54px 56px;
+  font-family: 'Merriweather Web';
+
+  h2 {
+    font-size: 1.5rem;
+    font-family: 'Novecento Sans Web';
+    text-transform: uppercase;
+  }
+
+  .tent-biz-hours-class {
+    width: 60%;
+    .day-of-week {
+      font-weight: bold;
+    }
+  }
+  .custom-html-widget {
+    p {
+      width: 60%;
+      i {
+        margin-right: 9px;
+      }
+    }
+  }
+  .widget_archive {
+    ul {
+      padding: 0;
+      margin: 0;
+      li {
+        list-style: none;
+      }
+    }
+  }
 }

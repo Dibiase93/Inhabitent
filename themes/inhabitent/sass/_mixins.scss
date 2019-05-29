@@ -30,7 +30,6 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template: 'main aside';
-    margin-top: 40px;
 
     .content-area {
       grid-area: main;

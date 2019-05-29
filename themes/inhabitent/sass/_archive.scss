@@ -1,5 +1,8 @@
-.archive {
+.post-type-archive {
   .product-type {
+    header {
+      position: static;
+    }
     text-align: center;
     border-bottom: 1px dashed #c8c8c8;
     margin-bottom: 48px;
@@ -14,7 +17,6 @@
   }
   .site-main {
     @include main-container-size;
-    margin-top: 48px;
     margin-bottom: 72px;
 
     .shop-container {
@@ -25,7 +27,6 @@
       justify-content: center;
       border-bottom: 1px dashed #c8c8c8;
       margin-bottom: 48px;
-      //   flex for product terms and h2
       h1 {
         width: 100%;
         margin-bottom: 8px;
@@ -83,15 +84,16 @@
         justify-content: space-between;
         align-items: center;
         align-content: flex-end;
-        padding: 12px 0 12px 16px;
+        padding: 12px 16px 12px 16px;
         position: relative;
+        overflow: hidden;
 
         h2 {
           margin: 0;
           font-weight: 400;
 
           &::before {
-            content: '..................';
+            content: '.....................';
             white-space: nowrap;
             float: right;
             width: 0;
@@ -104,6 +106,7 @@
             font-weight: 400;
             margin-right: 3px;
             color: #2f1339;
+            overflow: hidden;
             &:visited {
               color: #2f1339;
             }
@@ -116,7 +119,6 @@
         .entry-price {
           font-family: 'Merriweather Web', serif;
           background: white;
-          border-right: solid 16px white;
           border-left: solid 3px white;
           margin-left: 5px;
           position: absolute;

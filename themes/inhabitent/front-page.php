@@ -73,16 +73,21 @@ get_header(); ?>
 				<?php endif; ?>
 				<!-- </div> -->
 				<!-- post author and date -->
+				<div class="journal-title-btn">
 				<div class = "fp-post-meta">
 					<?php echo get_the_date(); ?>
 					<?php echo get_comments_number(); ?> Comments
 				</div>
 
 				  <!-- post title -->
-                <h3>
-					<a href="<?php the_permalink(); ?>"><h2><?php the_title()?></h2></a>
-					<a class="read-more-btn" href="<?php the_permalink(); ?>">Read More</a>
-				</h3>
+                
+					<h3>
+						<a href="<?php the_permalink(); ?>"><?php the_title()?></a>
+					</h3>
+					<div class="read-more-btn">
+						<a href="<?php the_permalink(); ?>">Read Entry</a>
+					</div>
+			   </div>
 				</div>
 				  <?php endforeach; wp_reset_postdata(); ?>
 				  </div>				
@@ -112,18 +117,21 @@ get_header(); ?>
 				</div>
 				   
 				<?php endif; ?>
-			
-                <h3>
-					<a href="<?php the_permalink(); ?>"><h2><?php the_title()?></h2></a>
-					<a class="read-more-btn" href="<?php the_permalink(); ?>">Read More</a>
-				</h3>
+			<div class="adventure-text">
+                <h3><a href="<?php the_permalink(); ?>"><?php the_title()?></a></h3>
+				
+				<div class="read-more-btn">
+					<a  href="<?php the_permalink(); ?>">Read More</a>
+				</div>
+			</div>
 
 				
 			</div>
 				  <?php endforeach; wp_reset_postdata(); ?>
 		</div>	
-		
-		<a href="<?php echo get_post_type_archive_link( 'adventure' ); ?>">More Adventures</a>
+		<p class="more-adventures">
+			<a href="<?php echo get_post_type_archive_link( 'adventure' ); ?>">More Adventures</a>
+		</p>
 			 </section>
 			 
 			

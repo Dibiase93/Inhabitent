@@ -1,12 +1,11 @@
 .page-about {
-  .site-content {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template: ' main ';
-  }
-
   .content-area {
     grid-area: main;
+  }
+
+  h1 {
+    color: white;
+    font-size: 3rem;
   }
 
   .hero-image-header {
@@ -15,11 +14,9 @@
   }
 
   .entry-content {
-    margin-top: 40px;
     display: flex;
     flex-direction: column;
-    // text-align: center;
-    // justify-content: space-between;
+    margin: 0;
 
     h2 {
       width: 50%;
