@@ -1,7 +1,7 @@
 /*!
-Theme Name: RED Starter Theme
+Theme Name: Inhabitent Theme
 Theme URI: http://underscores.me/
-Author: RED Academy
+Author: Andrew DiBiase
 Author URI: http://www.redacademy.com
 Description: A WordPress starter theme for RED Academy students.
 Version: 1.0.0
@@ -43,6 +43,185 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Page Templates
 	## Front page
 --------------------------------------------------------------*/
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden],
+template {
+  display: none; }
+
+a {
+  background-color: transparent; }
+
+a:active,
+a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b,
+strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  overflow: visible; }
+
+button,
+select {
+  text-transform: none; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto; }
+
+optgroup {
+  font-weight: bold; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
 #colophon {
   background-image: url("../../assets/images/dark-wood.png");
   width: 100%; }
@@ -104,47 +283,57 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       #colophon .footer-container .copyright-section .copyright_caps {
         text-transform: uppercase; }
 
+.archive,
 .blog,
 .single-post,
 .single-adventure {
   line-height: 1.75rem; }
+  .archive .site-content,
   .blog .site-content,
   .single-post .site-content,
   .single-adventure .site-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template: 'main aside'; }
+    .archive .site-content .content-area,
     .blog .site-content .content-area,
     .single-post .site-content .content-area,
     .single-adventure .site-content .content-area {
       grid-area: main; }
+    .archive .site-content .widget-area,
     .blog .site-content .widget-area,
     .single-post .site-content .widget-area,
     .single-adventure .site-content .widget-area {
       grid-area: aside; }
+  .archive .site-content,
   .blog .site-content,
   .single-post .site-content,
   .single-adventure .site-content {
     max-width: 1120px;
     margin-left: auto;
     margin-right: auto; }
+  .archive .content-area,
   .blog .content-area,
   .single-post .content-area,
   .single-adventure .content-area {
     padding: 54px 56px 54px 0; }
+  .archive article,
   .blog article,
   .single-post article,
   .single-adventure article {
     width: 100%; }
+    .archive article .entry-header,
     .blog article .entry-header,
     .single-post article .entry-header,
     .single-adventure article .entry-header {
       position: relative; }
+      .archive article .entry-header img,
       .blog article .entry-header img,
       .single-post article .entry-header img,
       .single-adventure article .entry-header img {
         max-width: 100%;
         height: auto; }
+      .archive article .entry-header h2,
       .blog article .entry-header h2,
       .single-post article .entry-header h2,
       .single-adventure article .entry-header h2 {
@@ -159,10 +348,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
         padding: 0.75rem 1.5rem;
         line-height: 1.1;
         letter-spacing: 2px; }
+        .archive article .entry-header h2 a,
         .blog article .entry-header h2 a,
         .single-post article .entry-header h2 a,
         .single-adventure article .entry-header h2 a {
           color: white; }
+      .archive article .entry-header .entry-meta,
       .blog article .entry-header .entry-meta,
       .single-post article .entry-header .entry-meta,
       .single-adventure article .entry-header .entry-meta {
@@ -175,11 +366,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
         text-transform: uppercase;
         margin-top: 0.75rem;
         margin-bottom: 1.5rem; }
+    .archive article .read-more-btn,
     .blog article .read-more-btn,
     .single-post article .read-more-btn,
     .single-adventure article .read-more-btn {
       margin-top: 0.75rem;
       margin-bottom: 3rem; }
+      .archive article .read-more-btn a,
       .blog article .read-more-btn a,
       .single-post article .read-more-btn a,
       .single-adventure article .read-more-btn a {
@@ -189,19 +382,23 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
         border: 1px solid black;
         text-transform: uppercase;
         color: black; }
+  .archive .tags-links,
   .blog .tags-links,
   .single-post .tags-links,
   .single-adventure .tags-links {
     margin-left: 20px; }
+  .archive .nav-previous,
   .blog .nav-previous,
   .single-post .nav-previous,
   .single-adventure .nav-previous {
     display: none; }
+  .archive .button-container,
   .blog .button-container,
   .single-post .button-container,
   .single-adventure .button-container {
     width: 100%;
     margin: 24px 0; }
+    .archive .button-container button,
     .blog .button-container button,
     .single-post .button-container button,
     .single-adventure .button-container button {
@@ -558,185 +755,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
       height: 300px; }
   .error404 .site-content .entry-content {
     margin-top: 24px; }
-
-html {
-  font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%; }
-
-body {
-  margin: 0; }
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
-  display: block; }
-
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  vertical-align: baseline; }
-
-audio:not([controls]) {
-  display: none;
-  height: 0; }
-
-[hidden],
-template {
-  display: none; }
-
-a {
-  background-color: transparent; }
-
-a:active,
-a:hover {
-  outline: 0; }
-
-abbr[title] {
-  border-bottom: 1px dotted; }
-
-b,
-strong {
-  font-weight: bold; }
-
-dfn {
-  font-style: italic; }
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0; }
-
-mark {
-  background: #ff0;
-  color: #000; }
-
-small {
-  font-size: 80%; }
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
-
-sup {
-  top: -0.5em; }
-
-sub {
-  bottom: -0.25em; }
-
-img {
-  border: 0; }
-
-svg:not(:root) {
-  overflow: hidden; }
-
-figure {
-  margin: 1em 40px; }
-
-hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  height: 0; }
-
-pre {
-  overflow: auto; }
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em; }
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  color: inherit;
-  font: inherit;
-  margin: 0; }
-
-button {
-  overflow: visible; }
-
-button,
-select {
-  text-transform: none; }
-
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer; }
-
-button[disabled],
-html input[disabled] {
-  cursor: default; }
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0; }
-
-input {
-  line-height: normal; }
-
-input[type="checkbox"],
-input[type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0; }
-
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto; }
-
-input[type="search"] {
-  -webkit-appearance: textfield;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box; }
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
-
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
-
-legend {
-  border: 0;
-  padding: 0; }
-
-textarea {
-  overflow: auto; }
-
-optgroup {
-  font-weight: bold; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-td,
-th {
-  padding: 0; }
 
 /*--------------------------------------------------------------
 # Embedded Fonts

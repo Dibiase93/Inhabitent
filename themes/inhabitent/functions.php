@@ -105,3 +105,14 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+/**
+ * Change the order in which the products are displayed
+ */
+function product_modify_query_order( $query ) {
+    if ( $query->is_home() && $query->is_main_query() ) {
+        $query->set( 'orderby', 'title' );
+        $query->set( 'order', 'ASC' );
+    }
+}
+add_action( 'pre_get_posts', 'product_modify_query_order' );

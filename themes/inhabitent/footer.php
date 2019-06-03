@@ -36,7 +36,7 @@
 					</div>
 					<div class="copyright-section">
 						<a href="#">
-					  		<p><span class="copyright_caps">copyright</span> &copy; 2019 <span class="copyright_caps">inhabitent<span></p>
+					  		<p><span class="copyright_caps">copyright</span> &copy; 2019 <span class="copyright_caps">inhabitent</span></p>
 						</a>
 					</div>
                 </div>

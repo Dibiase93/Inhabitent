@@ -1,17 +1,17 @@
 (function($) {
   $(function() {
+    const searchTextInput = $('.search-form input[type="search"]');
     $('#icon-search').click(function(event) {
       event.preventDefault();
-      const searchTextInput = $('.search-form text[type="search"]');
 
       $('.search-field').toggle('slide');
-      $(searchTextInput).focus();
+      searchTextInput.focus();
+    });
 
-      $(searchTextInput).blur(function() {
-        if ($(searchTextInput).val() === '') {
-          $('.search-field').hide('slide');
-        }
-      });
+    searchTextInput.blur(function() {
+      if ($(this).val() == '') {
+        $('.search-field').hide('slide');
+      }
     });
   });
 })(jQuery);

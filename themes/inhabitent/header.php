@@ -2,8 +2,6 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="UTF-8" />
-	<meta name="Andrew DiBiase" content="Inhabitent">
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
@@ -19,7 +17,7 @@
 			<div class="fixed-nav">
 			<div class="header-container">
 				<div class="site-branding">
-					<a href="http://localhost:8888/inhabitent/"><img src="<?php echo get_template_directory_uri();?>/assets/images/logos/inhabitent-logo-tent.svg" alt="inhabitent brand logo">	
+					<a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri();?>/assets/images/logos/inhabitent-logo-tent.svg" alt="inhabitent brand logo"></a>
 					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 				</div><!-- .site-branding -->
