@@ -53,7 +53,7 @@ get_header(); ?>
 		
 		  <section class="fp-journal">
 			<h2>Inhabitent Journal</h2>
-			<div class="journal-entries">
+			<article class="journal-entries">
 				<?php 
 				$args = array(  'post_type' => 'post',
 								 'numberposts' => '3', 
@@ -61,8 +61,6 @@ get_header(); ?>
 				$journal_posts = get_posts( $args );
 				?>
 				<?php foreach ( $journal_posts as $post ) : setup_postdata( $post ); ?>
-				
-				<!-- <div class="thumbnail"> -->
 
 				<div class="fp-journal-content">
 				<?php if ( has_post_thumbnail() ) : ?>
@@ -71,7 +69,7 @@ get_header(); ?>
 				   </a>
 				   
 				<?php endif; ?>
-				<!-- </div> -->
+				
 				<!-- post author and date -->
 				<div class="journal-title-btn">
 				<div class = "fp-post-meta">
@@ -90,13 +88,13 @@ get_header(); ?>
 			   </div>
 				</div>
 				  <?php endforeach; wp_reset_postdata(); ?>
-				  </div>				
+				</article>				
 			
 		  </section>
 
 		  <section class="fp-adventure">
 			<h2>Latest Adventures</h2>
-		<div class="adventure-entries">
+		<article class="adventure-entries">
 				<?php 
 				$args = array(  'post_type' => 'adventure',
 								 'numberposts' => '4', 
@@ -104,8 +102,6 @@ get_header(); ?>
 				$adventure_posts = get_posts( $args );
 				?>
 				<?php foreach ( $adventure_posts as $post ) : setup_postdata( $post ); ?>
-				
-				<!-- <div class="thumbnail"> -->
 
 			<div class="fp-adventure-content">
 				
@@ -128,15 +124,12 @@ get_header(); ?>
 				
 			</div>
 				  <?php endforeach; wp_reset_postdata(); ?>
-		</div>	
+		</article>	
 		<p class="more-adventures">
 			<a href="<?php echo get_post_type_archive_link( 'adventure' ); ?>">More Adventures</a>
 		</p>
 			 </section>
 			 
-			
-		 
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

@@ -1,13 +1,17 @@
 (function($) {
-  $('#icon-search').click(function(event) {
-    event.preventDefault();
-    const searchField = $('.search-form input[type="search"]');
+  $(function() {
+    $('#icon-search').click(function(event) {
+      event.preventDefault();
+      const searchTextInput = $('.search-form text[type="search"]');
 
-    $('.search-field').toggle('slide');
-    $(searchField).focus();
+      $('.search-field').toggle('slide');
+      $(searchTextInput).focus();
 
-    $(searchField).blur(function() {
-      $('.search-field').hide('slide');
+      $(searchTextInput).blur(function() {
+        if ($(searchTextInput).val() === '') {
+          $('.search-field').hide('slide');
+        }
+      });
     });
   });
 })(jQuery);

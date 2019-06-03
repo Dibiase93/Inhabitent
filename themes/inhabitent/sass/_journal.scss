@@ -1,6 +1,7 @@
 .blog,
 .single-post,
 .single-adventure {
+  
   @include side-bar;
   line-height: 1.75rem;
   .site-content {
