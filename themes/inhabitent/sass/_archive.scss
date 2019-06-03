@@ -91,28 +91,19 @@
         h2 {
           margin: 0;
           font-weight: 400;
+          font-size: 1rem;
+          text-decoration: none;
+          font-family: 'Merriweather Web', serif;
+          font-weight: 400;
+          margin-right: 3px;
+          color: #2f1339;
 
           &::before {
-            content: '.....................';
+            content: '...........................';
             white-space: nowrap;
             float: right;
             width: 0;
             box-sizing: inherit;
-          }
-          a {
-            font-size: 1rem;
-            text-decoration: none;
-            font-family: 'Merriweather Web', serif;
-            font-weight: 400;
-            margin-right: 3px;
-            color: #2f1339;
-            overflow: hidden;
-            &:visited {
-              color: #2f1339;
-            }
-            &:hover {
-              color: #248a83;
-            }
           }
         }
 

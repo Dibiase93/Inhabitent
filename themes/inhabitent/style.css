@@ -615,26 +615,20 @@ th {
       overflow: hidden; }
       .archive .article-container article .product-content h2 {
         margin: 0;
-        font-weight: 400; }
+        font-weight: 400;
+        font-size: 1rem;
+        text-decoration: none;
+        font-family: 'Merriweather Web', serif;
+        font-weight: 400;
+        margin-right: 3px;
+        color: #2f1339; }
         .archive .article-container article .product-content h2::before {
-          content: '.....................';
+          content: '...........................';
           white-space: nowrap;
           float: right;
           width: 0;
           -webkit-box-sizing: inherit;
                   box-sizing: inherit; }
-        .archive .article-container article .product-content h2 a {
-          font-size: 1rem;
-          text-decoration: none;
-          font-family: 'Merriweather Web', serif;
-          font-weight: 400;
-          margin-right: 3px;
-          color: #2f1339;
-          overflow: hidden; }
-          .archive .article-container article .product-content h2 a:visited {
-            color: #2f1339; }
-          .archive .article-container article .product-content h2 a:hover {
-            color: #248a83; }
       .archive .article-container article .product-content .entry-price {
         font-family: 'Merriweather Web', serif;
         background: white;
