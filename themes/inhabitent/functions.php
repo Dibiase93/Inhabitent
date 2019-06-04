@@ -109,10 +109,16 @@ require get_template_directory() . '/inc/extras.php';
 /**
  * Change the order in which the products are displayed
  */
+
 function product_modify_query_order( $query ) {
-    if ( $query->is_home() && $query->is_main_query() ) {
+	if ( 
+		(is_post_type_archive( 'product') ||  is_tax('product-type')) &&
+	     ($query->is_main_query() ||
+		 !is_admin())
+	) {
         $query->set( 'orderby', 'title' );
-        $query->set( 'order', 'ASC' );
+		$query->set( 'order', 'ASC' );
+		$query->set( 'posts_per_page', 16 );
     }
 }
 add_action( 'pre_get_posts', 'product_modify_query_order' );

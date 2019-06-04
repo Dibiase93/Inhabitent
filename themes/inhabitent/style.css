@@ -309,6 +309,7 @@ th {
   .single-post .site-content,
   .single-adventure .site-content,
   .archive .site-content {
+    padding-top: 60px;
     max-width: 1120px;
     margin-left: auto;
     margin-right: auto; }
@@ -699,10 +700,10 @@ th {
 .page-find-us .site-content {
   max-width: 1120px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding-top: 60px; }
   .page-find-us .site-content .content-area {
-    padding: 48px 56px 48px 0;
-    margin-top: 60px; }
+    padding: 48px 56px 48px 0; }
     .page-find-us .site-content .content-area iframe {
       height: 300px; }
   .page-find-us .site-content .entry-content {
@@ -1163,7 +1164,6 @@ a {
   color: #248a83; }
 
 .widget-area {
-  margin-top: 60px;
   border-left: 1px solid #e1e1e1;
   padding: 54px 0 54px 56px;
   font-family: 'Merriweather Web'; }

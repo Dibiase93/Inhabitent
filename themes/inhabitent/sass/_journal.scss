@@ -5,6 +5,7 @@
   @include side-bar;
   line-height: 1.75rem;
   .site-content {
+    padding-top: 60px;
     @include main_container_size;
   }
   .content-area {

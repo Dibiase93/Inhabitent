@@ -3,10 +3,10 @@
 
   .site-content {
     @include main_container_size;
+    padding-top: 60px;
 
     .content-area {
       padding: 48px 56px 48px 0;
-      margin-top: 60px;
 
       iframe {
         height: 300px;
