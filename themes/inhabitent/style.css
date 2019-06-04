@@ -596,7 +596,9 @@ th {
     border: 1px solid #e1e1e1;
     margin: 0; }
     .archive .article-container article img {
-      height: 200px; }
+      height: 200px;
+      -o-object-fit: cover;
+         object-fit: cover; }
     .archive .article-container article .entry-content {
       margin: 0; }
     .archive .article-container article .product-content {
@@ -1351,12 +1353,17 @@ object {
         -ms-flex-pack: justify;
             justify-content: space-between; }
     .home .shop-container .product-terms .shop-terms {
-      width: 23%;
+      width: 23.5%;
       border: 1px solid #e1e1e1;
       border-top: 5px solid #e1e1e1;
-      padding-top: 13.5px; }
+      padding: 0.75rem; }
       .home .shop-container .product-terms .shop-terms p {
-        padding: 0 30px 0 10px; }
+        font-family: "Merriweather Web" sans-serif;
+        font-size: 1rem;
+        line-height: 1.75;
+        color: #404040;
+        font-weight: 100px;
+        margin-bottom: 1.5rem; }
         .home .shop-container .product-terms .shop-terms p a {
           padding: 12px 24px;
           font-size: 0.9rem;
