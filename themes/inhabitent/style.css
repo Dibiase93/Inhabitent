@@ -285,59 +285,49 @@ th {
 
 .blog,
 .single-post,
-.single-adventure,
-.archive {
+.date {
   line-height: 1.75rem; }
   .blog .site-content,
   .single-post .site-content,
-  .single-adventure .site-content,
-  .archive .site-content {
+  .date .site-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template: 'main aside'; }
     .blog .site-content .content-area,
     .single-post .site-content .content-area,
-    .single-adventure .site-content .content-area,
-    .archive .site-content .content-area {
+    .date .site-content .content-area {
       grid-area: main; }
     .blog .site-content .widget-area,
     .single-post .site-content .widget-area,
-    .single-adventure .site-content .widget-area,
-    .archive .site-content .widget-area {
+    .date .site-content .widget-area {
       grid-area: aside; }
   .blog .site-content,
   .single-post .site-content,
-  .single-adventure .site-content,
-  .archive .site-content {
+  .date .site-content {
     padding-top: 60px;
     max-width: 1120px;
     margin-left: auto;
     margin-right: auto; }
   .blog .content-area,
   .single-post .content-area,
-  .single-adventure .content-area,
-  .archive .content-area {
+  .date .content-area {
     padding: 54px 56px 54px 0; }
   .blog article,
   .single-post article,
-  .single-adventure article,
-  .archive article {
+  .date article {
     width: 100%; }
     .blog article .entry-header,
     .single-post article .entry-header,
-    .single-adventure article .entry-header,
-    .archive article .entry-header {
+    .date article .entry-header {
       position: relative; }
       .blog article .entry-header img,
       .single-post article .entry-header img,
-      .single-adventure article .entry-header img,
-      .archive article .entry-header img {
+      .date article .entry-header img {
         max-width: 100%;
         height: auto; }
       .blog article .entry-header h2,
       .single-post article .entry-header h2,
-      .single-adventure article .entry-header h2,
-      .archive article .entry-header h2 {
+      .date article .entry-header h2 {
         top: 8px;
         left: 16px;
         position: absolute;
@@ -351,13 +341,11 @@ th {
         letter-spacing: 2px; }
         .blog article .entry-header h2 a,
         .single-post article .entry-header h2 a,
-        .single-adventure article .entry-header h2 a,
-        .archive article .entry-header h2 a {
+        .date article .entry-header h2 a {
           color: white; }
       .blog article .entry-header .entry-meta,
       .single-post article .entry-header .entry-meta,
-      .single-adventure article .entry-header .entry-meta,
-      .archive article .entry-header .entry-meta {
+      .date article .entry-header .entry-meta {
         right: 15px;
         bottom: 10px;
         position: absolute;
@@ -369,14 +357,12 @@ th {
         margin-bottom: 1.5rem; }
     .blog article .read-more-btn,
     .single-post article .read-more-btn,
-    .single-adventure article .read-more-btn,
-    .archive article .read-more-btn {
+    .date article .read-more-btn {
       margin-top: 0.75rem;
       margin-bottom: 3rem; }
       .blog article .read-more-btn a,
       .single-post article .read-more-btn a,
-      .single-adventure article .read-more-btn a,
-      .archive article .read-more-btn a {
+      .date article .read-more-btn a {
         font-family: 'Novecento Sans Web', sans-serif;
         padding: 12px 24px;
         font-size: 0.9rem;
@@ -385,24 +371,20 @@ th {
         color: black; }
   .blog .tags-links,
   .single-post .tags-links,
-  .single-adventure .tags-links,
-  .archive .tags-links {
+  .date .tags-links {
     margin-left: 20px; }
   .blog .nav-previous,
   .single-post .nav-previous,
-  .single-adventure .nav-previous,
-  .archive .nav-previous {
+  .date .nav-previous {
     display: none; }
   .blog .button-container,
   .single-post .button-container,
-  .single-adventure .button-container,
-  .archive .button-container {
+  .date .button-container {
     width: 100%;
     margin: 24px 0; }
     .blog .button-container button,
     .single-post .button-container button,
-    .single-adventure .button-container button,
-    .archive .button-container button {
+    .date .button-container button {
       padding: 12px 24px;
       background: white;
       text-align: center;
@@ -639,6 +621,26 @@ th {
         margin-left: 5px;
         position: absolute;
         right: 0; }
+
+.post-type-archive-adventure #content .fp-adventure h2 {
+  padding-top: 60px;
+  padding-bottom: 24px;
+  border-bottom: 1px dashed #c8c8c8; }
+
+.post-type-archive-adventure #content .adventure-entries {
+  display: grid;
+  grid-template: 'one one two two' 50% 'three three four four' 50%;
+  grid-gap: 1.5rem;
+  min-height: 80vw;
+  width: 100%; }
+  .post-type-archive-adventure #content .adventure-entries .adventure-text h3 {
+    font-size: 3rem; }
+  .post-type-archive-adventure #content .adventure-entries .adventure-thumbnail {
+    height: 100%; }
+    .post-type-archive-adventure #content .adventure-entries .adventure-thumbnail img {
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover; }
 
 .single-product .content-area {
   padding: 60px 0 48px 0; }
@@ -1289,6 +1291,7 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.post-type-archive-adventure h2,
 .home h2 {
   font-size: 2.4rem;
   font-weight: 400;
@@ -1298,6 +1301,7 @@ object {
   width: 100%;
   text-align: center; }
 
+.post-type-archive-adventure .hp-banner-container,
 .home .hp-banner-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1308,13 +1312,16 @@ object {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  .post-type-archive-adventure .hp-banner-container .hp-hero-banner,
   .home .hp-banner-container .hp-hero-banner {
     margin-top: 60px;
     max-height: 100vh;
     overflow: hidden;
     position: relative; }
+    .post-type-archive-adventure .hp-banner-container .hp-hero-banner img,
     .home .hp-banner-container .hp-hero-banner img {
       max-width: 100%; }
+    .post-type-archive-adventure .hp-banner-container .hp-hero-banner::after,
     .home .hp-banner-container .hp-hero-banner::after {
       display: block;
       position: absolute;
@@ -1328,12 +1335,15 @@ object {
       left: 0;
       right: 0;
       z-index: 9; }
+  .post-type-archive-adventure .hp-banner-container .hp-banner-logo,
   .home .hp-banner-container .hp-banner-logo {
     position: absolute;
     z-index: 10; }
+    .post-type-archive-adventure .hp-banner-container .hp-banner-logo img,
     .home .hp-banner-container .hp-banner-logo img {
       width: 100%; }
 
+.post-type-archive-adventure .shop-container,
 .home .shop-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1344,6 +1354,7 @@ object {
   max-width: 1120px;
   margin-left: auto;
   margin-right: auto; }
+  .post-type-archive-adventure .shop-container .product-terms,
   .home .shop-container .product-terms {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1352,11 +1363,13 @@ object {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between; }
+    .post-type-archive-adventure .shop-container .product-terms .shop-terms,
     .home .shop-container .product-terms .shop-terms {
       width: 23.5%;
       border: 1px solid #e1e1e1;
       border-top: 5px solid #e1e1e1;
       padding: 0.75rem; }
+      .post-type-archive-adventure .shop-container .product-terms .shop-terms p,
       .home .shop-container .product-terms .shop-terms p {
         font-family: "Merriweather Web" sans-serif;
         font-size: 1rem;
@@ -1364,6 +1377,7 @@ object {
         color: #404040;
         font-weight: 100px;
         margin-bottom: 1.5rem; }
+        .post-type-archive-adventure .shop-container .product-terms .shop-terms p a,
         .home .shop-container .product-terms .shop-terms p a {
           padding: 12px 24px;
           font-size: 0.9rem;
@@ -1371,9 +1385,11 @@ object {
           text-decoration: none;
           background-color: #248a83;
           color: white; }
+      .post-type-archive-adventure .shop-container .product-terms .shop-terms img,
       .home .shop-container .product-terms .shop-terms img {
         width: 25%; }
 
+.post-type-archive-adventure .fp-journal,
 .home .fp-journal {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1389,6 +1405,7 @@ object {
   max-width: 1120px;
   margin-left: auto;
   margin-right: auto; }
+  .post-type-archive-adventure .fp-journal .journal-entries,
   .home .fp-journal .journal-entries {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1400,11 +1417,13 @@ object {
     box-flex: wrap;
     width: 100%;
     position: relative; }
+    .post-type-archive-adventure .fp-journal .journal-entries .fp-journal-content,
     .home .fp-journal .journal-entries .fp-journal-content {
       width: 100%;
       max-width: 35%;
       border: 1px solid #e1e1e1;
       margin: 10px; }
+      .post-type-archive-adventure .fp-journal .journal-entries .fp-journal-content .journal-title-btn,
       .home .fp-journal .journal-entries .fp-journal-content .journal-title-btn {
         width: 80%;
         text-align: left;
@@ -1419,20 +1438,25 @@ object {
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between; }
+        .post-type-archive-adventure .fp-journal .journal-entries .fp-journal-content .journal-title-btn a,
         .home .fp-journal .journal-entries .fp-journal-content .journal-title-btn a {
           text-decoration: none;
           font-size: 1.3rem; }
+        .post-type-archive-adventure .fp-journal .journal-entries .fp-journal-content .journal-title-btn .read-more-btn,
         .home .fp-journal .journal-entries .fp-journal-content .journal-title-btn .read-more-btn {
           width: 100%; }
+          .post-type-archive-adventure .fp-journal .journal-entries .fp-journal-content .journal-title-btn .read-more-btn a,
           .home .fp-journal .journal-entries .fp-journal-content .journal-title-btn .read-more-btn a {
             color: black;
             padding: 12px 24px;
             font-size: 0.9rem;
             border: 1px solid black;
             text-transform: uppercase; }
+    .post-type-archive-adventure .fp-journal .journal-entries .journal-thumbnail img,
     .home .fp-journal .journal-entries .journal-thumbnail img {
       max-height: 225px; }
 
+.post-type-archive-adventure .fp-adventure,
 .home .fp-adventure {
   max-width: 1120px;
   margin-left: auto;
@@ -1443,14 +1467,17 @@ object {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-bottom: 72px; }
+  .post-type-archive-adventure .fp-adventure .adventure-entries,
   .home .fp-adventure .adventure-entries {
     display: grid;
     grid-template: 'one one two two' 50% 'one one three four' 50%;
     grid-gap: 20px 20px;
     max-height: 550px; }
+    .post-type-archive-adventure .fp-adventure .adventure-entries .fp-adventure-content,
     .home .fp-adventure .adventure-entries .fp-adventure-content {
       height: 100%;
       position: relative; }
+      .post-type-archive-adventure .fp-adventure .adventure-entries .fp-adventure-content::after,
       .home .fp-adventure .adventure-entries .fp-adventure-content::after {
         display: block;
         position: absolute;
@@ -1464,26 +1491,36 @@ object {
         left: 0;
         right: 0;
         z-index: 9; }
+      .post-type-archive-adventure .fp-adventure .adventure-entries .fp-adventure-content .adventure-thumbnail,
       .home .fp-adventure .adventure-entries .fp-adventure-content .adventure-thumbnail {
         height: 100%; }
+        .post-type-archive-adventure .fp-adventure .adventure-entries .fp-adventure-content .adventure-thumbnail img,
         .home .fp-adventure .adventure-entries .fp-adventure-content .adventure-thumbnail img {
           height: 100%;
-          -o-object-fit: fill;
-             object-fit: fill; }
+          -o-object-fit: cover;
+             object-fit: cover; }
+      .post-type-archive-adventure .fp-adventure .adventure-entries .fp-adventure-content:nth-child(1),
       .home .fp-adventure .adventure-entries .fp-adventure-content:nth-child(1) {
         grid-area: one; }
+      .post-type-archive-adventure .fp-adventure .adventure-entries .fp-adventure-content:nth-child(2),
       .home .fp-adventure .adventure-entries .fp-adventure-content:nth-child(2) {
         grid-area: two; }
+        .post-type-archive-adventure .fp-adventure .adventure-entries .fp-adventure-content:nth-child(2) h3,
         .home .fp-adventure .adventure-entries .fp-adventure-content:nth-child(2) h3 {
           font-size: 2.4rem; }
+      .post-type-archive-adventure .fp-adventure .adventure-entries .fp-adventure-content:nth-child(3),
       .home .fp-adventure .adventure-entries .fp-adventure-content:nth-child(3) {
         grid-area: three; }
+        .post-type-archive-adventure .fp-adventure .adventure-entries .fp-adventure-content:nth-child(3) h3,
         .home .fp-adventure .adventure-entries .fp-adventure-content:nth-child(3) h3 {
           font-size: 1.6rem; }
+      .post-type-archive-adventure .fp-adventure .adventure-entries .fp-adventure-content:nth-child(4),
       .home .fp-adventure .adventure-entries .fp-adventure-content:nth-child(4) {
         grid-area: four; }
+        .post-type-archive-adventure .fp-adventure .adventure-entries .fp-adventure-content:nth-child(4) h3,
         .home .fp-adventure .adventure-entries .fp-adventure-content:nth-child(4) h3 {
           font-size: 1.6rem; }
+      .post-type-archive-adventure .fp-adventure .adventure-entries .fp-adventure-content .adventure-text,
       .home .fp-adventure .adventure-entries .fp-adventure-content .adventure-text {
         position: absolute;
         top: 0;
@@ -1491,8 +1528,10 @@ object {
         font-weight: 400;
         margin: 24px;
         z-index: 10; }
+        .post-type-archive-adventure .fp-adventure .adventure-entries .fp-adventure-content .adventure-text h3,
         .home .fp-adventure .adventure-entries .fp-adventure-content .adventure-text h3 {
           margin: 0; }
+        .post-type-archive-adventure .fp-adventure .adventure-entries .fp-adventure-content .adventure-text .read-more-btn a,
         .home .fp-adventure .adventure-entries .fp-adventure-content .adventure-text .read-more-btn a {
           font-family: 'Novecento Sans Web', sans-serif;
           padding: 12px 24px;
@@ -1500,16 +1539,20 @@ object {
           border: 1px solid white;
           text-transform: uppercase;
           position: absolute; }
+          .post-type-archive-adventure .fp-adventure .adventure-entries .fp-adventure-content .adventure-text .read-more-btn a:hover,
           .home .fp-adventure .adventure-entries .fp-adventure-content .adventure-text .read-more-btn a:hover {
             background-color: #248a83; }
+        .post-type-archive-adventure .fp-adventure .adventure-entries .fp-adventure-content .adventure-text a,
         .home .fp-adventure .adventure-entries .fp-adventure-content .adventure-text a {
           color: white;
           font-family: 'Merriweather Web', serif;
           text-decoration: none;
           font-weight: normal; }
+  .post-type-archive-adventure .fp-adventure .more-adventures,
   .home .fp-adventure .more-adventures {
     width: 100%;
     margin: 36px 0 24px 0; }
+    .post-type-archive-adventure .fp-adventure .more-adventures a,
     .home .fp-adventure .more-adventures a {
       text-decoration: none;
       color: white;

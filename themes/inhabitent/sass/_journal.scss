@@ -1,7 +1,6 @@
 .blog,
 .single-post,
-.single-adventure,
-.archive {
+.date {
   @include side-bar;
   line-height: 1.75rem;
   .site-content {

@@ -120,3 +120,41 @@
     }
   }
 }
+
+// Custom Archive-Adventure styles for
+
+.post-type-archive-adventure {
+  #content {
+    .fp-adventure {
+      h2 {
+        padding-top: 60px;
+        padding-bottom: 24px;
+        border-bottom: 1px dashed #c8c8c8;
+      }
+    }
+    .adventure-entries {
+      display: grid;
+      grid-template:
+        'one one two two' 50%
+        'three three four four' 50%;
+      grid-gap: 1.5rem;
+      min-height: 80vw;
+      width: 100%;
+
+      .adventure-text {
+        h3 {
+          font-size: 3rem;
+        }
+      }
+
+      .adventure-thumbnail {
+        height: 100%;
+
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
