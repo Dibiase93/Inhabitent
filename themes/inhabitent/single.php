@@ -19,7 +19,8 @@ get_header(); ?>
                             <?php the_post_thumbnail( 'large' ); ?>
                         <?php endif; ?>
 
-                        <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+						<h2 class="entry-title"><?php the_title() ?></h2>
+						<p class="adventure-author">By <?php the_author(); ?></p>
 
                         <?php if ( 'post' === get_post_type() ) : ?>
                         <div class="entry-meta">
@@ -49,10 +50,6 @@ get_header(); ?>
 					</article><!-- #post-## -->
 
 
-
-
-			<?php the_post_navigation(); ?>
-
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :
@@ -65,5 +62,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -484,17 +484,21 @@ th {
         .fixed-nav .header-container .main-navigation a:hover {
           color: #2f1339; }
 
+.single-adventure .content-area,
 .page-about .content-area {
   grid-area: main; }
 
+.single-adventure h1,
 .page-about h1 {
   color: white;
   font-size: 3rem; }
 
+.single-adventure .hero-image-header,
 .page-about .hero-image-header {
   width: 100%;
   height: 100vh; }
 
+.single-adventure .entry-content,
 .page-about .entry-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -504,16 +508,61 @@ th {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0; }
+  .single-adventure .entry-content h2,
   .page-about .entry-content h2 {
     width: 50%;
     margin: 0 auto;
     text-align: center;
     position: static; }
+  .single-adventure .entry-content p,
   .page-about .entry-content p {
     width: 60%;
     margin: 0 auto;
     text-align: left;
     padding: 20px; }
+
+.single-adventure header img {
+  width: 100%; }
+
+.single-adventure header .adventure-author,
+.single-adventure header h2 {
+  text-align: left;
+  width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-transform: uppercase; }
+
+.single-adventure header h2 {
+  font-size: 2.4rem;
+  padding: 20px 20px 0 20px;
+  margin-bottom: 0.5rem; }
+
+.single-adventure header .adventure-author {
+  padding: 0 20px;
+  margin-top: 0; }
+
+.single-adventure article {
+  margin-bottom: 72px; }
+
+.single-adventure .entry-content {
+  padding: 0;
+  font-family: "Merriweather Web" sans-serif; }
+  .single-adventure .entry-content p {
+    padding-bottom: 0; }
+
+.single-adventure .button-container {
+  width: 60%;
+  margin: 1.5rem 0 0 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px; }
+  .single-adventure .button-container button {
+    padding: 12px 24px;
+    background: white;
+    text-align: center;
+    border: 1px solid black; }
 
 .archive .content-area {
   padding-top: 60px; }
