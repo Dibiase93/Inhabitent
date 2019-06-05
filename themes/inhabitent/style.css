@@ -347,7 +347,7 @@ th {
       .single-post article .entry-header .entry-meta,
       .date article .entry-header .entry-meta {
         right: 15px;
-        bottom: 10px;
+        bottom: -15px;
         position: absolute;
         background-color: #248a83;
         color: white;
@@ -389,6 +389,9 @@ th {
       background: white;
       text-align: center;
       border: 1px solid black; }
+
+.single-post .type-post .entry-header .entry-meta {
+  bottom: 30px; }
 
 .fixed-nav {
   background-color: rgba(0, 0, 0, 0.4);
@@ -803,6 +806,64 @@ th {
       height: 300px; }
   .error404 .site-content .entry-content {
     margin-top: 24px; }
+
+.search-no-results .site-content .not-found .page-content p,
+.search-no-results .site-content .error-404 .page-content p,
+.error404 .site-content .not-found .page-content p,
+.error404 .site-content .error-404 .page-content p {
+  font-family: "Merriweather Web" sans-serif; }
+
+.search-no-results .site-content .not-found .page-content label,
+.search-no-results .site-content .error-404 .page-content label,
+.error404 .site-content .not-found .page-content label,
+.error404 .site-content .error-404 .page-content label {
+  width: 300px; }
+  .search-no-results .site-content .not-found .page-content label input[type='search'],
+  .search-no-results .site-content .error-404 .page-content label input[type='search'],
+  .error404 .site-content .not-found .page-content label input[type='search'],
+  .error404 .site-content .error-404 .page-content label input[type='search'] {
+    font-family: "Merriweather Web" sans-serif; }
+
+.search-no-results .site-content .not-found .widget h2,
+.search-no-results .site-content .error-404 .widget h2,
+.error404 .site-content .not-found .widget h2,
+.error404 .site-content .error-404 .widget h2 {
+  font-family: "Novecento Sans Web" serif;
+  text-transform: uppercase; }
+
+.search-no-results .site-content .not-found .widget ul,
+.search-no-results .site-content .error-404 .widget ul,
+.error404 .site-content .not-found .widget ul,
+.error404 .site-content .error-404 .widget ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  .search-no-results .site-content .not-found .widget ul li a,
+  .search-no-results .site-content .error-404 .widget ul li a,
+  .error404 .site-content .not-found .widget ul li a,
+  .error404 .site-content .error-404 .widget ul li a {
+    text-decoration: none; }
+    .search-no-results .site-content .not-found .widget ul li a:hover,
+    .search-no-results .site-content .error-404 .widget ul li a:hover,
+    .error404 .site-content .not-found .widget ul li a:hover,
+    .error404 .site-content .error-404 .widget ul li a:hover {
+      color: purple; }
+    .search-no-results .site-content .not-found .widget ul li a:visited,
+    .search-no-results .site-content .error-404 .widget ul li a:visited,
+    .error404 .site-content .not-found .widget ul li a:visited,
+    .error404 .site-content .error-404 .widget ul li a:visited {
+      color: #248a83; }
+
+.search-results .read-more-btn {
+  margin-top: 0.75rem;
+  margin-bottom: 3rem; }
+  .search-results .read-more-btn a {
+    font-family: 'Novecento Sans Web', sans-serif;
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    border: 1px solid black;
+    text-transform: uppercase;
+    color: black; }
 
 /*--------------------------------------------------------------
 # Embedded Fonts

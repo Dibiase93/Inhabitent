@@ -39,7 +39,7 @@
       }
       .entry-meta {
         right: 15px;
-        bottom: 10px;
+        bottom: -15px;
         position: absolute;
         background-color: #248a83;
         color: white;
@@ -80,6 +80,16 @@
       background: white;
       text-align: center;
       border: 1px solid black;
+    }
+  }
+}
+
+.single-post {
+  .type-post {
+    .entry-header {
+      .entry-meta {
+        bottom: 30px;
+      }
     }
   }
 }
