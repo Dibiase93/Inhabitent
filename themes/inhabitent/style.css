@@ -394,14 +394,12 @@ th {
   bottom: 30px; }
 
 .fixed-nav {
-  background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
   width: 100%;
   height: 60px;
   z-index: 12;
   padding: 8px 0 8px 0;
-  color: white;
-  border-bottom: 1px solid #e1e1e1; }
+  color: #248a83; }
   .fixed-nav .header-container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -434,11 +432,13 @@ th {
       width: auto;
       z-index: 100000;
       /* above all content */ }
+    .fixed-nav .header-container .site-branding-white,
     .fixed-nav .header-container .site-branding {
       width: 50px; }
-      .fixed-nav .header-container .site-branding a img {
-        -webkit-filter: brightness(100);
-                filter: brightness(100); }
+    .fixed-nav .header-container .site-branding-white {
+      display: block; }
+    .fixed-nav .header-container .site-branding {
+      display: none; }
     .fixed-nav .header-container .main-navigation {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -453,7 +453,8 @@ th {
       -webkit-box-pack: end;
           -ms-flex-pack: end;
               justify-content: flex-end;
-      width: 60%; }
+      width: 60%;
+      color: white; }
       .fixed-nav .header-container .main-navigation .search-form {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -481,9 +482,9 @@ th {
       .fixed-nav .header-container .main-navigation a {
         text-decoration: none;
         text-transform: uppercase;
-        color: white;
         line-height: 1.75;
-        padding-left: 24px; }
+        padding-left: 24px;
+        color: inherit; }
         .fixed-nav .header-container .main-navigation a:hover {
           color: #2f1339; }
 
@@ -853,6 +854,13 @@ th {
     .error404 .site-content .not-found .widget ul li a:visited,
     .error404 .site-content .error-404 .widget ul li a:visited {
       color: #248a83; }
+
+.search-no-results .site-content .not-found .widget select,
+.search-no-results .site-content .error-404 .widget select,
+.error404 .site-content .not-found .widget select,
+.error404 .site-content .error-404 .widget select {
+  font-family: "Merriweather Web" sans-serif;
+  text-transform: none; }
 
 .search-results .read-more-btn {
   margin-top: 0.75rem;
@@ -1424,7 +1432,6 @@ object {
           align-items: center; }
   .post-type-archive-adventure .hp-banner-container .hp-hero-banner,
   .home .hp-banner-container .hp-hero-banner {
-    margin-top: 60px;
     max-height: 100vh;
     overflow: hidden;
     position: relative; }

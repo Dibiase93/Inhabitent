@@ -37,6 +37,10 @@
             }
           }
         }
+        select {
+          font-family: $font__secondary;
+          text-transform: none;
+        }
       }
     }
   }

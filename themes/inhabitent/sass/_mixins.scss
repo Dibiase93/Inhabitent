@@ -40,3 +40,38 @@
     }
   }
 }
+
+@mixin nav-toggle {
+  .search-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    label {
+      order: 2;
+    }
+    fieldset {
+      border: none;
+      a {
+        padding: 0 12px 0 12px;
+      }
+    }
+  }
+
+  input[type='search'] {
+    order: 2;
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1.75;
+    padding-left: 24px;
+    color: inherit;
+
+    &:hover {
+      color: #2f1339;
+    }
+  }
+}
