@@ -1,5 +1,5 @@
-.fixed-nav {
-  position: fixed;
+.absolute-nav {
+  position: absolute;
   width: 100%;
   height: 60px;
   z-index: 12;
@@ -35,25 +35,71 @@
       width: 50px;
     }
 
-    // .page-about,
-    // .home {
-    .site-branding-white {
+    .main-navigation {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      width: 60%;
+      color: white;
+
+      @include nav-toggle;
+    }
+
+    .main-nav-green {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      width: 60%;
+      color: #248a83;
+
+      @include nav-toggle;
+    }
+  }
+}
+
+.fixed-nav {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  z-index: 12;
+  padding: 8px 0 8px 0;
+  color: #248a83;
+  border-bottom: 1px solid #e1e1e1;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.4)
+  );
+
+  .header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    @include main-container-size;
+    grid-template: [row1-start] 'logo . nav-menu' 1fr [row1-end];
+
+    .site-description {
+      clip: rect(1px, 1px, 1px, 1px);
+      position: absolute !important;
+      height: 1px;
+      width: 1px;
+      overflow: hidden;
+    }
+    .site-description:focus {
+      clip: auto !important;
       display: block;
+      height: auto;
+      left: 5px;
+      top: 5px;
+      width: auto;
+      z-index: 100000; /* above all content */
     }
+    .site-branding-white,
     .site-branding {
-      display: none;
+      width: 50px;
     }
-
-    // .main-nav-green {
-    //   display: flex;
-    //   flex-direction: row;
-    //   align-items: center;
-    //   justify-content: flex-end;
-    //   width: 60%;
-    //   color: white;
-
-    //   @include nav-toggle;
-    // }
 
     .main-navigation {
       display: flex;
@@ -66,15 +112,15 @@
       @include nav-toggle;
     }
 
-    // .main-nav-green {
-    //   display: flex;
-    //   flex-direction: row;
-    //   align-items: center;
-    //   justify-content: flex-end;
-    //   width: 60%;
-    //   color: #248a83;
+    .main-nav-green {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      width: 60%;
+      color: #248a83;
 
-    //   @include nav-toggle;
-    // }
+      @include nav-toggle;
+    }
   }
 }

@@ -86,3 +86,20 @@
     }
   }
 }
+
+.site-branding-white {
+  display: none;
+}
+.site-branding {
+  display: block;
+}
+
+.page-about,
+.home {
+  .site-branding-white {
+    display: block;
+  }
+  .site-branding {
+    display: none;
+  }
+}

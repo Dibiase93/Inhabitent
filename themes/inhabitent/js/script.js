@@ -19,6 +19,7 @@
 
     if (frontPage || aboutPage) {
       let bannerHeight;
+      // $('#site-navigation').toggleClass($('.main-nav-green'));
 
       if (frontPage) {
         bannerHeight = $('.hp-hero-banner').height();
@@ -33,12 +34,13 @@
         if (yPos > bannerHeight) {
           $('.site-branding-white').hide();
           $('.site-branding').show();
-          // $('#site-navigation').addClass($('main-nav-green'));
-          // $(this).removeClass($('main-navigation'));
+          $('#site-navigation').addClass('main-nav-green');
+          $('#nav-toggle').addClass('fixed-nav');
         } else {
           $('.site-branding').hide();
           $('.site-branding-white').show();
-          // $(this).addClass($('main-navigation'));
+          $('#site-navigation').removeClass('main-nav-green');
+          $('#nav-toggle').removeClass('fixed-nav');
         }
       });
     }
