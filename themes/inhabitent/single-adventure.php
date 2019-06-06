@@ -43,9 +43,9 @@ get_header(); ?>
 						</footer><!-- .entry-footer -->
 
 						<div class="button-container">
-						<button><i class="fab fa-facebook-f"></i> LIKE</button>
-						<button><i class="fab fa-twitter"></i> TWEET</button>
-						<button><i class="fab fa-pinterest"> PIN</i></button>
+						<button><i class="fab fa-facebook-f"></i> Like</button>
+						<button><i class="fab fa-twitter"></i> Tweet</button>
+						<button><i class="fab fa-pinterest"> Pin</i></button>
 					</div>
 					</article><!-- #post-## -->
 

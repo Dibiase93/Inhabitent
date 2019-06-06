@@ -16,10 +16,10 @@
 
     const frontPage = $('.home').length;
     const aboutPage = $('.page-about').length;
+    const singleAdventure = $('.single-adventure').length;
 
-    if (frontPage || aboutPage) {
+    if (frontPage || aboutPage || singleAdventure) {
       let bannerHeight;
-      // $('#site-navigation').toggleClass($('.main-nav-green'));
 
       if (frontPage) {
         bannerHeight = $('.hp-hero-banner').height();
@@ -28,6 +28,14 @@
       if (aboutPage) {
         bannerHeight = $('.hero-image-header').height();
       }
+
+      if (singleAdventure) {
+        bannerHeight = $('.entry-header img').height();
+      }
+
+      $('#nav-toggle').addClass('absolute-nav');
+      $('#nav-toggle').removeClass('fixed-nav');
+      $('#site-navigation').removeClass('main-nav-green');
 
       $(window).scroll(function() {
         let yPos = $(window).scrollTop();

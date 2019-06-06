@@ -124,3 +124,21 @@
     }
   }
 }
+
+.site-branding-white {
+  display: none;
+}
+.site-branding {
+  display: block;
+}
+
+.single-adventure,
+.page-about,
+.home {
+  .site-branding-white {
+    display: block;
+  }
+  .site-branding {
+    display: none;
+  }
+}

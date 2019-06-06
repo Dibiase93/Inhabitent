@@ -83,23 +83,23 @@
       background: white;
       text-align: center;
       border: 1px solid black;
+      box-shadow: none;
+      text-shadow: none;
+      text-transform: uppercase;
+      border-radius: 0;
+
+      .fab {
+        span {
+          font-family: $font__headers;
+        }
+      }
+
+      &:hover {
+        background-color: #248a83;
+        color: white;
+        border: none;
+        border: 1px solid #248a83;
+      }
     }
-  }
-}
-
-.site-branding-white {
-  display: none;
-}
-.site-branding {
-  display: block;
-}
-
-.page-about,
-.home {
-  .site-branding-white {
-    display: block;
-  }
-  .site-branding {
-    display: none;
   }
 }

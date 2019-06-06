@@ -20,8 +20,7 @@ get_header(); ?>
                         <?php endif; ?>
 
 						<h2 class="entry-title"><?php the_title() ?></h2>
-						<p class="adventure-author">By <?php the_author(); ?></p>
-
+						
                         <?php if ( 'post' === get_post_type() ) : ?>
                         <div class="entry-meta">
                             <?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php red_starter_posted_by(); ?>
@@ -43,9 +42,9 @@ get_header(); ?>
 						</footer><!-- .entry-footer -->
 
 						<div class="button-container">
-						<button><i class="fab fa-facebook-f"></i> LIKE</button>
-						<button><i class="fab fa-twitter"></i> TWEET</button>
-						<button><i class="fab fa-pinterest"> PIN</i></button>
+						<button><i class="fab fa-facebook-f"></i><span> Like</span></button>
+						<button><i class="fab fa-twitter"></i><span> Tweet</span></button>
+						<button><i class="fab fa-pinterest"><span> Pin</span></i></button>
 					</div>
 					</article><!-- #post-## -->
 

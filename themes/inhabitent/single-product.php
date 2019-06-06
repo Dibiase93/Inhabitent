@@ -38,9 +38,9 @@ get_header(); ?>
 				    'after'  => '</div>',
 					) );?>
 					<div class="button-container">
-						<button><i class="fab fa-facebook-f"></i> LIKE</button>
-						<button><i class="fab fa-twitter"></i> TWEET</button>
-						<button><i class="fab fa-pinterest"> PIN</i></button>
+						<button><i class="fab fa-facebook-f"></i><span> Like</span></button>
+						<button><i class="fab fa-twitter"></i><span> Tweet</span></button>
+						<button><i class="fab fa-pinterest"><span> Pin</span></i></button>
 					</div>
 				</div><!-- .entry-content -->
 			

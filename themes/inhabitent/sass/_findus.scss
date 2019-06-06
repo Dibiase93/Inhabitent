@@ -1,6 +1,14 @@
 .page-find-us {
   @include side-bar;
 
+  h1 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+  }
+  h2 {
+    font-size: 2.1rem;
+    text-transform: uppercase;
+  }
   .site-content {
     @include main_container_size;
     padding-top: 60px;
@@ -15,6 +23,29 @@
 
     .entry-content {
       margin-top: 24px;
+    }
+  }
+  form {
+    input[type='submit'] {
+      padding: 12px 24px;
+      background: #248a83;
+      text-align: center;
+      border: 1px solid white;
+      box-shadow: none;
+      text-shadow: none;
+      text-transform: uppercase;
+      border-radius: 0;
+      color: white;
+
+      &:hover {
+        box-shadow: none;
+        text-shadow: none;
+
+        background-image: linear-gradient(
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0.2)
+        );
+      }
     }
   }
 }

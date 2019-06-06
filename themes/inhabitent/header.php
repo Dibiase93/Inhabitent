@@ -14,7 +14,7 @@
 			<a class="skip-link screen-reader-text" href="#content"><?php echo esc_html( 'Skip to content' ); ?></a>
 
 			<header id="masthead" class="site-header" role="banner">
-			<div id="nav-toggle" class="absolute-nav">
+			<div id="nav-toggle" class="fixed-nav">
 			<div class="header-container">
 		
 
@@ -31,7 +31,7 @@
 				</div><!-- .site-branding -->
 				
 		
-			<?php if (is_front_page() || is_page_template( 'page-about.php' )): ?>
+			<?php if (is_front_page() || is_page_template( 'page-about.php' ) || is_page_template( 'single-adventure.php' ) ): ?>
 
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 

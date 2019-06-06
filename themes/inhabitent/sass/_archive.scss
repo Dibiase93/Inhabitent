@@ -74,6 +74,9 @@
       img {
         height: 200px;
         object-fit: cover;
+        &:hover {
+          cursor: pointer;
+        }
       }
 
       .entry-content {
@@ -97,7 +100,10 @@
           font-family: 'Merriweather Web', serif;
           font-weight: 400;
           margin-right: 3px;
-          color: #2f1339;
+
+          a {
+            color: #2f1339;
+          }
 
           &::before {
             content: '...........................';
@@ -115,6 +121,7 @@
           margin-left: 5px;
           position: absolute;
           right: 0;
+          color: #2f1339;
         }
       }
     }
